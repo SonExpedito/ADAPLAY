@@ -1198,13 +1198,14 @@ nav {
   text-decoration: none;
 }
 
+/* Responsividade-css */
+
 @media (max-width: 1275px) {
   .logozinha span {
-    visibility: hidden;
+    display: none;
   }
 }
 
-/* Responsive-css */
 @media (max-width: 890px) {
   nav {
     padding: 20px 3%;
@@ -1277,13 +1278,13 @@ nav {
   }
 
   .logozinha span {
-    visibility: visible;
+    display: inline;
   }
 }
 
 @media (max-width: 385px) {
   .logozinha span {
-    visibility: hidden;
+    display: none;
   }
 
 }
