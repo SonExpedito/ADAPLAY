@@ -362,6 +362,7 @@ body {
 
 #content #cart .table tbody tr td {
   vertical-align: middle;
+  text-align: center;
 }
 #content #cart .table tfoot {
   font-size: 18px;

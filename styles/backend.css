@@ -166,6 +166,12 @@ button:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
+#deletebutton{ /*CSS do Botão de Delete*/
+  border: none;
+  font-size: 1.5em;
+  color: #ff3232;
+}
+
 fieldset {
   border: 1px solid silver;
   margin: 0 2px;

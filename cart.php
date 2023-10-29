@@ -118,7 +118,7 @@ include("includes/main.php");
                       </td>
                       <td>
                         <!-- Caixa de seleção para remover o produto -->
-                        <input type="checkbox" name="remove[]" value="<?php echo $idProduto; ?>">
+                        <button name="remove" value="<?php echo $idProduto; ?>" id="deletebutton" autocomplete="off"><i class='bx bx-trash'></i></button>
                       </td>
                       <td>
                         R$<?php echo $subtotal; ?>,00
@@ -249,15 +249,18 @@ include("includes/main.php");
       function updateCart()
       {
         global $con;
-        if (isset($_POST['update'])) {
-          foreach ($_POST['remove'] as $removeId) {
-            // Remove o produto do carrinho
+
+        if (isset($_POST['remove'])) { //Verifica se o Botão foi apertado
+            $removeId = $_POST['remove']; //Puxa o Valor do Botão
+            
+            //Comando SQL 
             $deleteProduct = "delete from cart where p_id='$removeId'";
             $runDelete = mysqli_query($con, $deleteProduct);
             if ($runDelete) {
               echo "<script>window.open('cart.php','_self')</script>";
             }
-          }
+          
+         
         }
       }
       // Chama a função para atualizar o carrinho de compras
