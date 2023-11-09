@@ -2,8 +2,8 @@
 
 session_start();
 
-  //Variáveis de Link
-$index= "index.php";
+//Variáveis de Link
+$index = "index.php";
 $register = "customer_register.php";
 $conta = "customer/my_account.php?my_orders";
 $cart = "cart.php";
@@ -12,6 +12,7 @@ $products = "shop.php";
 $contato = "contact.php";
 $logout = "logout.php";
 $checkout = "checkout.php";
+$sobrenos = "about.php";
 
 include("includes/db.php");
 include("includes/header.php");
@@ -97,7 +98,7 @@ if ($check_product == 0) {
 
 
 
-?>
+  ?>
 
   <main>
     <!-- HERO -->
@@ -157,7 +158,8 @@ if ($check_product == 0) {
 
                 </div><!-- carousel-inner Ends -->
 
-                <a href="#myCarousel" class="left carousel-control" data-slide="prev"><!-- left carousel-control Starts -->
+                <a href="#myCarousel" class="left carousel-control"
+                  data-slide="prev"><!-- left carousel-control Starts -->
 
                   <span class="glyphicon glyphicon-chevron-left"> </span>
 
@@ -165,7 +167,8 @@ if ($check_product == 0) {
 
                 </a><!-- left carousel-control Ends -->
 
-                <a class="right carousel-control" href="#myCarousel" data-slide="next"><!-- right carousel-control Starts -->
+                <a class="right carousel-control" href="#myCarousel"
+                  data-slide="next"><!-- right carousel-control Starts -->
 
                   <span class="glyphicon glyphicon-chevron-right"> </span>
 
@@ -186,7 +189,9 @@ if ($check_product == 0) {
 
             <div class="box"><!-- box Starts -->
 
-              <h1 class="text-center"> <?php echo $pro_title; ?> </h1>
+              <h1 class="text-center">
+                <?php echo $pro_title; ?>
+              </h1>
 
               <?php
 
@@ -250,7 +255,7 @@ if ($check_product == 0) {
 
                 if ($status == "product") {
 
-                ?>
+                  ?>
 
                   <div class="form-group"><!-- form-group Starts -->
 
@@ -265,7 +270,9 @@ if ($check_product == 0) {
                         $String_Texto = "Definir Quantidade";
                         ?>
 
-                        <option value="<?php echo $Valor_Quantidade; ?>"><?php echo $String_Texto; ?></option>
+                        <option value="<?php echo $Valor_Quantidade; ?>">
+                          <?php echo $String_Texto; ?>
+                        </option>
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -294,7 +301,9 @@ if ($check_product == 0) {
 
                         ?>
 
-                        <option value="<?php echo $Valor_Tamanho; ?>"><?php echo $String_Texto_Tamanho ?> </option>
+                        <option value="<?php echo $Valor_Tamanho; ?>">
+                          <?php echo $String_Texto_Tamanho ?>
+                        </option>
                         <option>Pequeno</option>
                         <option>Médio</option>
                         <option>Grande</option>
@@ -535,7 +544,8 @@ Preço do Pacote: $$pro_price
 
         <div class="box" id="details"><!-- box Starts -->
 
-          <a class="btn btn-info tab" style="margin-bottom:10px;" href="#description" data-toggle="tab"><!-- btn btn-primary tab Starts -->
+          <a class="btn btn-info tab" style="margin-bottom:10px;" href="#description"
+            data-toggle="tab"><!-- btn btn-primary tab Starts -->
 
             <?php
 
@@ -551,13 +561,15 @@ Preço do Pacote: $$pro_price
 
           </a><!-- btn btn-primary tab Ends -->
 
-          <a class="btn btn-info tab" style="margin-bottom:10px;" href="#features" data-toggle="tab"><!-- btn btn-primary tab Starts -->
+          <a class="btn btn-info tab" style="margin-bottom:10px;" href="#features"
+            data-toggle="tab"><!-- btn btn-primary tab Starts -->
 
             Características
 
           </a><!-- btn btn-primary tab Ends -->
 
-          <a class="btn btn-info tab" style="margin-bottom:10px;" href="#video" data-toggle="tab"><!-- btn btn-primary tab Starts -->
+          <a class="btn btn-info tab" style="margin-bottom:10px;" href="#video"
+            data-toggle="tab"><!-- btn btn-primary tab Starts -->
 
             Sons e Vídeos
 
@@ -567,7 +579,8 @@ Preço do Pacote: $$pro_price
 
           <div class="tab-content"><!-- tab-content Starts -->
 
-            <div id="description" class="tab-pane fade in active" style="margin-top:7px;"><!-- description tab-pane fade in active Starts -->
+            <div id="description" class="tab-pane fade in active" style="margin-top:7px;">
+              <!-- description tab-pane fade in active Starts -->
 
               <?php echo $pro_desc; ?>
 
@@ -598,13 +611,14 @@ Preço do Pacote: $$pro_price
 
 
 
-          ?>
+            ?>
 
             <div class="col-md-3 col-sm-6"><!-- col-md-3 col-sm-6 Starts -->
 
               <div class="box same-height headline"><!-- box same-height headline Starts -->
 
-                <h3 class="text-center"> Você também pode gostar destes produtos: Nós fornecemos os 3 principais itens de produtos. </h3>
+                <h3 class="text-center"> Você também pode gostar destes produtos: Nós fornecemos os 3 principais itens de
+                  produtos. </h3>
 
               </div><!-- box same-height headline Ends -->
 

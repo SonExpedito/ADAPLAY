@@ -3,7 +3,7 @@
 session_start();
 
 //Variáveis de Link
-$index= "index.php";
+$index = "index.php";
 $register = "customer_register.php";
 $conta = "customer/my_account.php?my_orders";
 $cart = "cart.php";
@@ -12,6 +12,7 @@ $products = "shop.php";
 $contato = "contact.php";
 $logout = "logout.php";
 $checkout = "#";
+$sobrenos = "about.php";
 
 
 include("includes/db.php");

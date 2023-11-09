@@ -3,7 +3,7 @@
 session_start();
 
 //Variáveis de Link
-$index= "index.php";
+$index = "index.php";
 $register = "customer_register.php";
 $conta = "customer/my_account.php?my_orders";
 $cart = "cart.php";
@@ -12,6 +12,7 @@ $products = "shop.php";
 $contato = "contact.php";
 $logout = "logout.php";
 $checkout = "checkout.php";
+$sobrenos = "#";
 
 
 include("includes/db.php");
@@ -45,22 +46,28 @@ include("includes/main.php");
         <?php
 
         $get_about_us = "select * from about_us"; // Consulta SQL para obter informações "Sobre Nós" do banco de dados.
-
+        
         $run_about_us = mysqli_query($con, $get_about_us); // Executa a consulta SQL.
-
+        
         $row_about_us = mysqli_fetch_array($run_about_us); // Obtém os resultados da consulta.
-
+        
         $about_heading = $row_about_us['about_heading']; // Obtém o título "Sobre Nós".
         $about_short_desc = $row_about_us['about_short_desc']; // Obtém uma breve descrição "Sobre Nós".
         $about_desc = $row_about_us['about_desc']; // Obtém a descrição completa "Sobre Nós".
-
+        
         ?>
 
-        <h1> <?php echo $about_heading; ?> </h1> <!-- Exibe o título "Sobre Nós". -->
+        <h1>
+          <?php echo $about_heading; ?>
+        </h1> <!-- Exibe o título "Sobre Nós". -->
 
-        <p class="lead"> <?php echo $about_short_desc; ?> </p> <!-- Exibe a breve descrição "Sobre Nós". -->
+        <p class="lead">
+          <?php echo $about_short_desc; ?>
+        </p> <!-- Exibe a breve descrição "Sobre Nós". -->
 
-        <p> <?php echo $about_desc; ?> </p> <!-- Exibe a descrição completa "Sobre Nós". -->
+        <p>
+          <?php echo $about_desc; ?>
+        </p> <!-- Exibe a descrição completa "Sobre Nós". -->
 
       </div><!-- Caixa termina -->
 

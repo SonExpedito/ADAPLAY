@@ -3,7 +3,7 @@
 session_start();
 
 //Variáveis de Link
-$index= "index.php";
+$index = "index.php";
 $register = "customer_register.php";
 $conta = "customer/my_account.php?my_orders";
 $cart = "#";
@@ -12,6 +12,7 @@ $products = "shop.php";
 $contato = "contact.php";
 $logout = "logout.php";
 $checkout = "checkout.php";
+$sobrenos = "about.php";
 
 
 // Inclui o arquivo de conexão com o banco de dados
@@ -56,7 +57,9 @@ include("includes/main.php");
           $count = mysqli_num_rows($runCarrinho);
           ?>
 
-          <p class="text-muted"> Você tem atualmente <?php echo $count; ?> item(s) no seu carrinho. </p>
+          <p class="text-muted"> Você tem atualmente
+            <?php echo $count; ?> item(s) no seu carrinho.
+          </p>
 
           <div class="table-responsive"><!-- tabela-responsiva Começa -->
             <table class="table"><!-- tabela Começa -->
@@ -98,33 +101,39 @@ include("includes/main.php");
 
                     // Atualiza o total do carrinho
                     $total += $subtotal;
-                ?>
+                    ?>
                     <tr><!-- tr Começa -->
                       <td>
                         <img src="admin_area/product_images/<?php echo $produtoImagem1; ?>">
                       </td>
                       <td>
-                        <a href="#"> <?php echo $tituloProduto; ?> </a>
+                        <a href="#">
+                          <?php echo $tituloProduto; ?>
+                        </a>
                       </td>
                       <td>
                         <!-- Campo de entrada para a quantidade do produto -->
-                        <input type="text" name="quantity" value="<?php echo $_SESSION['quantidadeProduto']; ?>" data-product_id="<?php echo $idProduto; ?>" class="quantity form-control">
+                        <input type="text" name="quantity" value="<?php echo $_SESSION['quantidadeProduto']; ?>"
+                          data-product_id="<?php echo $idProduto; ?>" class="quantity form-control">
                       </td>
                       <td>
-                        R$<?php echo $precoUnico; ?>,00
+                        R$
+                        <?php echo $precoUnico; ?>,00
                       </td>
                       <td>
                         <?php echo $proSize; ?>
                       </td>
                       <td>
                         <!-- Caixa de seleção para remover o produto -->
-                        <button name="remove" value="<?php echo $idProduto; ?>" id="deletebutton" autocomplete="off"><i class='bx bx-trash'></i></button>
+                        <button name="remove" value="<?php echo $idProduto; ?>" id="deletebutton" autocomplete="off"><i
+                            class='bx bx-trash'></i></button>
                       </td>
                       <td>
-                        R$<?php echo $subtotal; ?>,00
+                        R$
+                        <?php echo $subtotal; ?>,00
                       </td>
                     </tr><!-- tr Termina -->
-                <?php
+                    <?php
                   }
                 }
                 ?>
@@ -133,7 +142,9 @@ include("includes/main.php");
               <tfoot><!-- rodapé Começa -->
                 <tr>
                   <th colspan="5"> Total </th>
-                  <th colspan="2"> R$<?php echo $total; ?>,00 </th>
+                  <th colspan="2"> R$
+                    <?php echo $total; ?>,00
+                  </th>
                 </tr>
               </tfoot><!-- rodapé Termina -->
             </table><!-- tabela Termina -->
@@ -251,16 +262,16 @@ include("includes/main.php");
         global $con;
 
         if (isset($_POST['remove'])) { //Verifica se o Botão foi apertado
-            $removeId = $_POST['remove']; //Puxa o Valor do Botão
-            
-            //Comando SQL 
-            $deleteProduct = "delete from cart where p_id='$removeId'";
-            $runDelete = mysqli_query($con, $deleteProduct);
-            if ($runDelete) {
-              echo "<script>window.open('cart.php','_self')</script>";
-            }
-          
-         
+          $removeId = $_POST['remove']; //Puxa o Valor do Botão
+      
+          //Comando SQL 
+          $deleteProduct = "delete from cart where p_id='$removeId'";
+          $runDelete = mysqli_query($con, $deleteProduct);
+          if ($runDelete) {
+            echo "<script>window.open('cart.php','_self')</script>";
+          }
+
+
         }
       }
       // Chama a função para atualizar o carrinho de compras
@@ -355,7 +366,9 @@ $productLabel
             <tbody><!-- corpo Começa -->
               <tr>
                 <td> Subtotal do Pedido </td>
-                <th> R$<?php echo $total; ?>,00 </th>
+                <th> R$
+                  <?php echo $total; ?>,00
+                </th>
               </tr>
               <tr>
                 <td> Envio e manipulação </td>
@@ -367,7 +380,9 @@ $productLabel
               </tr>
               <tr class="total">
                 <td>Total</td>
-                <th>R$<?php echo $total; ?>,00</th>
+                <th>R$
+                  <?php echo $total; ?>,00
+                </th>
               </tr>
             </tbody><!-- corpo Termina -->
           </table><!-- tabela Termina -->
@@ -381,8 +396,8 @@ $productLabel
 <script src="js/jquery.min.js"> </script>
 <script src="js/bootstrap.min.js"></script>
 <script>
-  $(document).ready(function(data) {
-    $(document).on('keyup', '.quantity', function() {
+  $(document).ready(function (data) {
+    $(document).on('keyup', '.quantity', function () {
       var id = $(this).data("product_id");
       var quantity = $(this).val();
       if (quantity != '') {
@@ -393,7 +408,7 @@ $productLabel
             id: id,
             quantity: quantity
           },
-          success: function(data) {
+          success: function (data) {
             $("body").load('cart.php');
           }
         });
