@@ -91,7 +91,7 @@ include("includes/main.php");
       experiência aos clientes,
       tornando a compra mais acessível e conveniente.
     </p>
-    <button>Sobre nós</button>
+    <a href="about.php"><button href="about.php">Sobre nós</button></a>
   </div>
   <div class="imagem">
     <img src="images/banner1.png" alt="Produtos da Loja">

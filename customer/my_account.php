@@ -16,6 +16,7 @@ if (!isset($_SESSION['customer_email'])) {
   $contato = "../contact.php";
   $logout = "../logout.php";
   $checkout = "../checkout.php";
+  $sobrenos = "../about.php";
 
   // Inclui os arquivos de configuração, cabeçalho, funções relacionadas à conta e a estrutura principal da página
   include("../includes/db.php");

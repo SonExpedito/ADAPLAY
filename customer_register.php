@@ -176,7 +176,7 @@ include("includes/main.php");
   <div class="containerrr" id="containerrr">
     <div class="form-container sign-up">
       <form action="checkout.php" method="post">
-        <h1>login</h1>
+        <h1>LOGIN</h1>
         <div class="social-icons">
           <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
         </div>
@@ -194,7 +194,7 @@ include("includes/main.php");
     </div>
     <div class="form-container sign-in">
       <form action="customer_register.php" method="post" enctype="multipart/form-data" name="cliente">
-        <h1>Cadastrar</h1>
+        <h1>CADASTRAR</h1>
         <span>Foto de perfil</span>
         <div class="social-icons">
           <div class="max-width">
@@ -242,16 +242,16 @@ include("includes/main.php");
     <div class="toggle-container">
       <div class="toggle">
         <div class="toggle-panel toggle-left">
-          <h1>Adaplay</h1>
+          <h1>ADAPLAY</h1>
           <img src="images/Cadastro/Login.png" alt="" class="Img-fun1">
           <p>Bem vindo de volta!!!</p>
           <button class="hiddenn" id="loginn">Cadastrar</button>
 
         </div>
         <div class="toggle-panel toggle-right">
-          <h1>Adaplay</h1>
+          <h1>ADAPLAY</h1>
           <img src="images/Cadastro/Cadastro.png" alt="" class="Img-fun2">
-          <p>já tem uma conta? click em login</p>
+          <p>Já está registrado? Faça Login</p>
           <button class="hiddenn" id="registerr">Login</button>
         </div>
       </div>

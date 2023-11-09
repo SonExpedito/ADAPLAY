@@ -689,7 +689,7 @@ img {
 }
 
 .page-footer .footer-nav__col .phone__number {
-  color: #00c8c8;
+  color: #11111f;
   font-size: 14px;
   text-decoration: underline;
   -webkit-transition: color 0.2s;
@@ -706,7 +706,7 @@ img {
 }
 
 .page-footer .footer-nav__col .email__addr {
-  color: #00c8c8;
+  color: #11111f;
   font-size: 14px;
   text-decoration: underline;
   -webkit-transition: color 0.2s;

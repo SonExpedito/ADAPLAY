@@ -7,7 +7,7 @@
 /*https://www.flaticon.com/free-icon/camera_685655?term=photo&page=1&position=1&related_item_id=685655*/
 
 * {
-    margin: 0 auto;
+    margin: 0 0;
     padding: 0;
     box-sizing: border-box;
     border: none;
@@ -117,7 +117,7 @@ input[type='file'] {
 
 .containerrr input{
     background-color: #f2f2f2;
-    border: none;
+    border: 0.025px solid rgb(163, 163, 163);
     margin: 10px 0;
     padding: 10px 15px;
     font-size: 13px;
