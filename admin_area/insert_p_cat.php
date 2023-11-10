@@ -7,136 +7,136 @@ if (!isset($_SESSION['admin_email'])) {
 
 
 ?>
-<!-- Início da 1ª linha -->
+    <!-- Início da 1ª linha -->
 
-<div class="row"><!-- 1 linha começa -->
+    <div class="row"><!-- 1 linha começa -->
 
-    <!-- Início da coluna-lg-12 -->
-    <div class="col-lg-12"><!-- col-lg-12 Inicia -->
+        <!-- Início da coluna-lg-12 -->
+        <div class="col-lg-12"><!-- col-lg-12 Inicia -->
 
-        <!-- Início da trilha de navegação -->
-        <ol class="breadcrumb"><!-- breadcrumb Inicia -->
+            <!-- Início da trilha de navegação -->
+            <ol class="breadcrumb"><!-- breadcrumb Inicia -->
 
-            <li>
+                <li>
 
-                <i class="fa fa-dashboard"></i> Dashboard / Inserir Categoria de Produtos
+                    <i class="fa fa-dashboard"></i> Dashboard / Inserir Categoria de Produtos
 
-            </li>
+                </li>
 
-            /ol><!-- breadcrumb Termina -->
-        <!-- Fim da trilha de navegação -->
+                /ol><!-- breadcrumb Termina -->
+                <!-- Fim da trilha de navegação -->
 
-    </div><!-- col-lg-12 Termina -->
-    <!-- Fim da coluna-lg-12 -->
+        </div><!-- col-lg-12 Termina -->
+        <!-- Fim da coluna-lg-12 -->
 
-</div><!-- Fim de 1 linha -->
-<!-- Fim da 1ª linha -->
+    </div><!-- Fim de 1 linha -->
+    <!-- Fim da 1ª linha -->
 
-<!-- Início da 2ª linha -->
-<div class="row"><!-- Início de 2 linhas -->
+    <!-- Início da 2ª linha -->
+    <div class="row"><!-- Início de 2 linhas -->
 
-    <!-- Início da coluna-lg-12 -->
-    <div class="col-lg-12"><!-- col-lg-12 Inicia -->
+        <!-- Início da coluna-lg-12 -->
+        <div class="col-lg-12"><!-- col-lg-12 Inicia -->
 
-        <!-- Início do painel padrão -->
-        <div class="panel panel-default"><!-- panel panel-default Inicia -->
+            <!-- Início do painel padrão -->
+            <div class="panel panel-default"><!-- panel panel-default Inicia -->
 
-            <!-- Início do cabeçalho do painel -->
-            <div class="panel-heading"><!-- panel-heading Inicia -->
+                <!-- Início do cabeçalho do painel -->
+                <div class="panel-heading"><!-- panel-heading Inicia -->
 
-                <!-- Início do título do painel -->
-                <h3 class="panel-title"><!-- panel-title Inicia -->
+                    <!-- Início do título do painel -->
+                    <h3 class="panel-title"><!-- panel-title Inicia -->
 
-                    <i class="fa fa-money fa-fw"></i> Inserir Categoria de Produtos
+                        <i class="fa fa-money fa-fw"></i> Inserir Categoria de Produtos
 
                     </h3><!-- panel-title Termina -->
-                <!-- Fim do título do painel -->
+                    <!-- Fim do título do painel -->
 
-            </div><!-- cabeçalho do painel Termina -->
-            <!-- Fim do cabeçalho do painel -->
+                </div><!-- cabeçalho do painel Termina -->
+                <!-- Fim do cabeçalho do painel -->
 
-            <!-- Início do corpo do painel -->
-            <div class="panel-body"><!-- panel-body Inicia -->
+                <!-- Início do corpo do painel -->
+                <div class="panel-body"><!-- panel-body Inicia -->
 
-                <!-- Início do formulário horizontal -->
-                <form class="form-horizontal" action="" method="post" enctype="multipart/form-data"><!-- form-horizontal Starts -->
+                    <!-- Início do formulário horizontal -->
+                    <form class="form-horizontal" action="" method="post" enctype="multipart/form-data"><!-- form-horizontal Starts -->
 
-                    <!-- Início do grupo de formulário -->
-                    <div class="form-group"><!-- form-group Inicia -->
+                        <!-- Início do grupo de formulário -->
+                        <div class="form-group"><!-- form-group Inicia -->
 
-                        <label class="col-md-3 control-label">Título da Categoria de Produtos</label>
+                            <label class="col-md-3 control-label">Título da Categoria de Produtos</label>
 
-                        <div class="col-md-6">
+                            <div class="col-md-6">
 
-                            <input type="text" name="p_cat_title" class="form-control">
+                                <input type="text" name="p_cat_title" class="form-control">
 
-                        </div>
-
-                        </div><!-- form-group Termina -->
-                    <!-- Fim do grupo de formulário -->
-
-                    <!-- Início do grupo de formulário -->
-                    <div class="form-group"><!-- form-group Inicia -->
-
-                        <label class="col-md-3 control-label">Mostrar como Categoria De Produto Principal</label>
-
-                        <div class="col-md-6">
-
-                            <input type="radio" name="p_cat_top" value="sim">
-
-                            <label> Sim </label>
-
-                            <input type="radio" name="p_cat_top" value="não">
-
-                            <label> Não </label>
-
-                        </div>
+                            </div>
 
                         </div><!-- form-group Termina -->
-                    <!-- Fim do grupo de formulário -->
+                        <!-- Fim do grupo de formulário -->
 
-                    <!-- Início do grupo de formulário -->
-                    <div class="form-group"><!-- form-group Inicia -->
+                        <!-- Início do grupo de formulário -->
+                        <div class="form-group"><!-- form-group Inicia -->
 
-                        <label class="col-md-3 control-label"> Selecione a Imagem da Categoria de Produtos</label>
+                            <label class="col-md-3 control-label">Mostrar como Categoria De Produto Principal</label>
 
-                        <div class="col-md-6">
+                            <div class="col-md-6">
 
-                            <input type="file" name="p_cat_image" class="form-control">
+                                <input type="radio" name="p_cat_top" value="sim">
 
-                        </div>
+                                <label> Sim </label>
 
-                        </div><!-- form-group Termina -->
-                    <!-- Fim do grupo de formulário -->
+                                <input type="radio" name="p_cat_top" value="não">
 
-                    <!-- Início do grupo de formulário -->
-                    <div class="form-group"><!-- form-group Inicia -->
+                                <label> Não </label>
 
-                        <label class="col-md-3 control-label"></label>
-
-                        <div class="col-md-6">
-
-                            <input type="submit" name="submit" value="Enviar Agora" class="btn btn-primary form-control">
-
-                        </div>
+                            </div>
 
                         </div><!-- form-group Termina -->
-                    <!-- Fim do grupo de formulário -->
+                        <!-- Fim do grupo de formulário -->
 
-                </form><!-- form-horizontal Termina -->
-                <!-- Fim do formulário horizontal -->
+                        <!-- Início do grupo de formulário -->
+                        <div class="form-group"><!-- form-group Inicia -->
 
-            </div><!-- painel-body Termina -->
-            <!-- Fim do corpo do painel -->
+                            <label class="col-md-3 control-label"> Selecione a Imagem da Categoria de Produtos</label>
 
-        </div><!-- painel panel-default Termina -->
-        <!-- Fim do painel padrão -->
+                            <div class="col-md-6">
 
-    </div><!-- col-lg-12 Termina -->
-    <!-- Fim da coluna-lg-12 -->
+                                <input type="file" name="p_cat_image" class="form-control">
 
-</div><!-- Fim de 2 linhas -->
-<!-- Fim da 2ª linha -->
+                            </div>
+
+                        </div><!-- form-group Termina -->
+                        <!-- Fim do grupo de formulário -->
+
+                        <!-- Início do grupo de formulário -->
+                        <div class="form-group"><!-- form-group Inicia -->
+
+                            <label class="col-md-3 control-label"></label>
+
+                            <div class="col-md-6">
+
+                                <input type="submit" name="submit" value="Enviar Agora" class="btn btn-primary form-control">
+
+                            </div>
+
+                        </div><!-- form-group Termina -->
+                        <!-- Fim do grupo de formulário -->
+
+                    </form><!-- form-horizontal Termina -->
+                    <!-- Fim do formulário horizontal -->
+
+                </div><!-- painel-body Termina -->
+                <!-- Fim do corpo do painel -->
+
+            </div><!-- painel panel-default Termina -->
+            <!-- Fim do painel padrão -->
+
+        </div><!-- col-lg-12 Termina -->
+        <!-- Fim da coluna-lg-12 -->
+
+    </div><!-- Fim de 2 linhas -->
+    <!-- Fim da 2ª linha -->
     <?php
 
     if (isset($_POST['submit'])) {

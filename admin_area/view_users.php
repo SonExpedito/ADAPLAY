@@ -7,7 +7,7 @@ if (!isset($_SESSION['admin_email'])) {
     echo "<script>window.open('login.php','_self')</script>";
 } else {
 
-    ?>
+?>
     <div class="row"><!-- 1 linha começa -->
 
         <div class="col-lg-12"><!-- col-lg-12 Inicia -->
@@ -99,7 +99,7 @@ if (!isset($_SESSION['admin_email'])) {
 
 
 
-                                    ?>
+                                ?>
 
                                     <tr>
 

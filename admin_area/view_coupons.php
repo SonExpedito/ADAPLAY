@@ -7,7 +7,7 @@ if (!isset($_SESSION['admin_email'])) {
 } else {
 
 
-    ?>
+?>
 
     <div class="row"><!-- 1 linha começa -->
 
@@ -103,7 +103,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                                     $i++;
 
-                                    ?>
+                                ?>
 
                                     <tr>
 
@@ -120,7 +120,7 @@ if (!isset($_SESSION['admin_email'])) {
                                         </td>
 
                                         <td>
-                                            <?php echo "$$coupon_price"; ?>
+                                            <?php echo "R$$coupon_price"; ?>
                                         </td>
 
                                         <td>

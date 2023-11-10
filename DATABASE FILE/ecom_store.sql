@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 09/11/2023 às 07:21
+-- Tempo de geração: 10/11/2023 às 07:40
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -20,8 +20,7 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `ecom_store`
 --
-
-Create database `ecom_store`;
+create database `ecom_store`;
 use `ecom_store`;
 
 -- --------------------------------------------------------
@@ -114,10 +113,8 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`cat_id`, `cat_title`, `cat_top`, `cat_image`) VALUES
-(2, 'Feminine', 'não', 'feminelg.png'),
-(3, 'Kids', 'não', 'kidslg.jpg'),
-(4, 'Others', 'sim', 'othericon.png'),
-(5, 'Men', 'sim', 'malelg.png');
+(2, 'Infantojuvenil', 'não', 'pngwing.com.png'),
+(3, 'Infantil', 'sim', 'kidslg.jpg');
 
 -- --------------------------------------------------------
 
@@ -160,7 +157,7 @@ CREATE TABLE `coupons` (
 --
 
 INSERT INTO `coupons` (`coupon_id`, `product_id`, `coupon_title`, `coupon_price`, `coupon_code`, `coupon_limit`, `coupon_used`) VALUES
-(8, 25, 'Teste ', '200', 'GUILHERME', 5, 2);
+(9, 31, 'Pinguim', '200', 'ADAPLAY', 30, 2);
 
 -- --------------------------------------------------------
 
@@ -212,13 +209,6 @@ CREATE TABLE `customer_orders` (
   `order_status` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
---
--- Despejando dados para a tabela `customer_orders`
---
-
-INSERT INTO `customer_orders` (`order_id`, `customer_id`, `due_amount`, `invoice_no`, `qty`, `size`, `order_date`, `order_status`) VALUES
-(41, 9, 290, 619037725, 1, 'Pequeno', '2023-11-09 05:55:12', 'Pago');
-
 -- --------------------------------------------------------
 
 --
@@ -237,9 +227,9 @@ CREATE TABLE `manufacturers` (
 --
 
 INSERT INTO `manufacturers` (`manufacturer_id`, `manufacturer_title`, `manufacturer_top`, `manufacturer_image`) VALUES
-(2, 'Adidas', 'não', 'adilg.png'),
-(3, 'Nike', 'não', 'niketransl.png'),
-(4, 'Philip Plein', 'não', 'pplg.png'),
+(2, 'Laratec', 'não', '307957405_156424830365050_8502602063558353003_n.png'),
+(3, 'Adaptabilities', 'não', 'isla_500x500.50570380_h8r4outo.png'),
+(4, 'Fisher-Price', 'não', '4.png'),
 (5, 'Lacoste', 'não', 'lacostelg.png'),
 (7, 'Polo', 'não', 'polobn.jpg'),
 (8, 'Gildan 1800', 'não', 'sample_img360.png');
@@ -307,13 +297,6 @@ CREATE TABLE `pending_orders` (
   `order_status` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
---
--- Despejando dados para a tabela `pending_orders`
---
-
-INSERT INTO `pending_orders` (`order_id`, `customer_id`, `invoice_no`, `product_id`, `qty`, `size`, `order_status`) VALUES
-(41, 9, 619037725, '34', 1, 'Pequeno', 'Pago');
-
 -- --------------------------------------------------------
 
 --
@@ -346,16 +329,16 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`product_id`, `p_cat_id`, `cat_id`, `manufacturer_id`, `date`, `product_title`, `product_url`, `product_img1`, `product_img2`, `product_img3`, `product_price`, `product_psp_price`, `product_desc`, `product_features`, `product_video`, `product_keywords`, `product_label`, `status`) VALUES
-(25, 4, 3, 2, '2023-09-16 23:03:38', 'Teste', 'TesteUrl', 'indisponivel-vodute.png', 'indisponivel-vodute.png', 'indisponivel-vodute.png', 350, 300, '\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n', '\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n', '\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n', 'Teste', 'Presente', 'product'),
-(26, 4, 3, 3, '2023-11-09 05:45:18', 'Teste - 2', 'Teste2Url', 'indisponivel-vodute.png', 'indisponivel-vodute.png', 'indisponivel-vodute.png', 800, 400, '\r\n\r\nbbbbbbbbb\r\n\r\n\r\n\r\n', '\r\n\r\n\r\n\r\n\r\n\r\n', '\r\n\r\n\r\n\r\n\r\n\r\n', 'Teste 2', 'Novo', 'product'),
-(27, 4, 4, 4, '2023-11-09 05:45:01', 'Teste - 3', 'Teste3Url', 'indisponivel-vodute.png', 'indisponivel-vodute.png', 'indisponivel-vodute.png', 200, 100, '\r\n\r\nccccccccccccccccccc\r\n\r\n\r\n\r\n', '\r\n\r\n\r\n\r\n\r\n\r\n', '\r\n\r\n\r\n\r\n\r\n\r\n', 'Teste - 3 ', 'Oferta', 'product'),
-(28, 4, 5, 5, '2023-11-09 05:45:13', 'Teste - 4', 'Teste4Url', 'indisponivel-vodute.png', 'indisponivel-vodute.png', 'indisponivel-vodute.png', 50, 40, '\r\n\r\n\r\ncccccccccccccc\r\n', '\r\n\r\n\r\n\r\n', '\r\n\r\n\r\n\r\n', 'Teste - 4', 'Novo', 'product'),
-(29, 4, 2, 7, '2023-11-09 05:45:27', 'Teste - 5', 'Teste5Url', 'indisponivel-vodute.png', 'indisponivel-vodute.png', 'indisponivel-vodute.png', 500, 466, '\r\n\r\n\r\neeeeeeeeeeeeeeeeeee\r\n', '\r\n\r\n\r\n\r\n', '\r\n\r\n\r\n\r\n', 'Teste - 5', 'Presente', 'product'),
-(30, 4, 4, 8, '2023-11-09 05:45:37', 'Teste - 6', 'Teste6Url', 'indisponivel-vodute.png', 'indisponivel-vodute.png', 'indisponivel-vodute.png', 900, 500, '\r\n\r\n\r\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\r\n', '\r\n\r\n\r\n\r\n', '\r\n\r\n\r\n\r\n', 'Teste - 6 ', 'Oferta', 'product'),
-(31, 4, 3, 2, '2023-11-09 05:46:57', 'Teste - 7', 'Teste7Url', 'indisponivel-vodute.png', 'indisponivel-vodute.png', 'indisponivel-vodute.png', 65, 55, '\r\n\r\n\r\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\r\n', '\r\n\r\n\r\n\r\n', '\r\n\r\n\r\n\r\n', 'Teste - 7', 'Presente', 'product'),
-(32, 4, 2, 7, '2023-09-17 05:01:21', 'Teste - 8', 'Teste8Url', 'indisponivel-vodute.png', 'indisponivel-vodute.png', 'indisponivel-vodute.png', 80, 60, 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', '\r\n\r\n', '\r\n\r\n', 'Teste - 8', 'Novo', 'product'),
-(33, 4, 3, 5, '2023-11-09 05:45:56', 'Teste - 0', 'Teste0Url', 'indisponivel-vodute.png', 'indisponivel-vodute.png', 'indisponivel-vodute.png', 150, 50, '\r\n\r\n\r\ndddddddddddddddddddddddddddddddddddd\r\n', '\r\n\r\n\r\n\r\n', '\r\n\r\n\r\n\r\n', 'Teste - 0', 'Novo', 'product'),
-(34, 4, 3, 3, '2023-11-09 05:46:02', 'Teste - 9', 'Teste9Url', 'indisponivel-vodute.png', 'indisponivel-vodute.png', 'indisponivel-vodute.png', 345, 290, '\r\naaaaaaaaaaaaaaaaavc\r\n\r\n\r\n', '\r\n\r\n\r\n\r\n', '\r\n\r\n\r\n\r\n', 'Teste - 9', 'Presente', 'product');
+(25, 4, 3, 2, '2023-11-10 05:13:26', 'Casal Legal - Léo e Lu', 'leo-e-lu', 'casal-legal-brinquedo-artesanal-brincanto.png', 'boneca-lu-brinquedo-adaptado-brincanto.webp', 'bonecos-adaptados-estimulo-criancas-com-deficiencia-visual.webp', 90, 70, '\r\n\r\n\r\n\r\nCasal Legal Leo e Lu, desenvolvida para interagir com a criança com deficiência visual, estimula noção do esquema corporal, conscientização sobre as partes do corpo e sobre suas posições, percepção tátil, discriminação de diferentes texturas. Bonequinhos revestidos de tecido macio, de cor branca, leves e agradáveis ao tato, representando uma menina e um menino. As pernas e os braços são soltos e presos com velcro, a boneca tem cabelo loiro e comprido, preso nas laterais do rosto com laços de fita. Boneca está com vestido amarelo, fechado com velcro nas costas e avental de tecido xadrez preto e branco. Nos pés, dois laços de fita vermelha. O boneco está vestido com macacão amarelo tendo na frente um bolso xadrez preto e branco. Sob o macacão, uma camisa do mesmo tecido xadrez preto e branco, fechada nas costas com velcro.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n', '\r\n\r\n\r\n\r\nPeso: Não aplicável |\r\nDimensões: Não aplicável |\r\nOpções: Boneca de pano Lu, Casal legal – Leo e Lu\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n', '\r\n\r\n\r\n\r\nNão disponível.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n', 'Leo e Lu', 'Presente', 'product'),
+(26, 4, 2, 2, '2023-11-10 05:13:40', 'Dama Adaptado ', 'dama-adaptado-preto', 'tabuleiro-de-dama-laratec-1.png', '2xg.jpg', 'jogo-de-dama-adaptado-para-deficientes-visuais.png', 135, 110, '\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nCom o jogo de xadrez adaptado você conseguirá desenvolver várias habilidades como: pensamento lógico, planejamento, concentração e atenção, imaginação, criatividade, paciência e autocontrole.\r\nEspecificações\r\n\r\nTabuleiro em MDF (nas opções “dobrável” ou “inteiriço”) com base em veludo. As casas possuem furo central para encaixe das peças, sendo as casas claras (casas baixas) com rebaixamento em relação às casas escuras (casas altas).\r\n\r\nNos modelos de tabuleiros com braile, as bordas verticais e horizontais do tabuleiro possuem escritas (números nas bordas verticais e letras nas bordas horizontais) em tinta de baixo relevo e em braile.\r\n\r\nAs peças são nas cores brancas e pretas, ambas com pino de metal em sua base. As peças pretas possuem um pino em sua extremidade superior para diferenciação tátil.\r\n\r\nO tabuleiro vem acomodado em bolsa na cor preta ou azul marinho de lona acolchoada com alças. As peças são acomodadas separadamente em bolsas menores (mesmo material e cores da bolsa principal) de modo que podem ser guardadas juntas ao tabuleiro.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nBaralho Braille - Naipe Extra Gigante: – Produto desenvolvido especialmente para deficientes visuais, sendo eles cegos ou com baixa visão. Utiliza o sistema Braille. – Contando com toda a qualidade da Shopping do Braille, o Baralho Naipe Extra Gigante é perfeito para quem procura a oportunidade de tornar seus jogos de cartas mais inclusivos e acessíveis para todos. – Esse baralho possui uma cor de verso.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n', '\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPeso: Não aplicável | Dimensões: Não aplicável | Tamanho Do Tabuleiro - 30 x 30 cm, 40 x 40 cm | Tipo De Tabuleiro	- Dobrável, Inteiriço | Bordas Do Tabuleiro - Com marcações em braille e tinta, Lisas sem marcações.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n', '\r\n\r\n\r\n\r\n\r\n\r\n\r\n<iframe width=\"854\" height=\"480\" src=\"https://www.youtube.com/watch?v=pPV48vyi7eY\" frameborder=\"0\" allowfullscreen></iframe>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n', 'Dama Adaptado', 'Oferta', 'product'),
+(27, 4, 2, 2, '2023-11-10 05:13:48', 'Xadrez Adaptado', 'xadrez-adaptado', 'Xadrez.png', 'MicrosoftTeams-image.png', 'Pessoas.png', 268, 235, '\r\n\r\n\r\n\r\n\r\nCom o jogo de xadrez adaptado você conseguirá desenvolver várias habilidades como: pensamento lógico, planejamento, concentração e atenção, imaginação, criatividade, paciência e autocontrole.\r\nEspecificações\r\n\r\nTabuleiro em MDF (nas opções “dobrável” ou “inteiriço”) com base em veludo. As casas possuem furo central para encaixe das peças, sendo as casas claras (casas baixas) com rebaixamento em relação às casas escuras (casas altas).\r\n\r\nNos modelos de tabuleiros com braile, as bordas verticais e horizontais do tabuleiro possuem escritas (números nas bordas verticais e letras nas bordas horizontais) em tinta de baixo relevo e em braile.\r\n\r\nAs peças são nas cores brancas e pretas, ambas com pino de metal em sua base. As peças pretas possuem um pino em sua extremidade superior para diferenciação tátil.\r\n\r\nO tabuleiro vem acomodado em bolsa na cor preta ou azul marinho de lona acolchoada com alças. As peças são acomodadas separadamente em bolsas menores (mesmo material e cores da bolsa principal) de modo que podem ser guardadas juntas ao tabuleiro.\r\n\r\n\r\n\r\n\r\n', '\r\n\r\n\r\n\r\n\r\n\r\nPeso: Não aplicável | Dimensões: Não aplicável | Tamanho Do Tabuleiro: 30 x 30 cm, 40 x 40 cm | Tipo De Tabuleiro:	Dobrável, Inteiriço | Bordas Do Tabuleiro: Com marcações em braille e tinta, Lisas sem marcações.\r\n\r\n\r\n\r\n\r\n', '\r\n\r\n\r\n\r\n\r\nVídeo Indisponível.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n', 'Xadrez adaptado', 'Oferta', 'product'),
+(28, 4, 2, 2, '2023-11-10 05:13:55', 'Trilha Adaptado', 'jogo-trilha-adaptada', 'jogo-de-trilha-adaptado-para-pessoas-com-deficiencia-visual.png', 'trilha.png', 'Trilha-tabuleiro-2-600x600-1.jpg', 140, 120, '\r\n\r\n\r\n\r\nO Jogo de Trilha adaptado é um jogo do tipo estratégico com deslocamento das peças sobre as trilhas. O Jogo de Trilha adaptado possui trilhas em alto relevo e peças com marcações táteis, tornando o jogo acessível para pessoas com deficiência visual.\r\n\r\n\r\n\r\n', '\r\n\r\n\r\n\r\nPeso: 1068 g | Dimensões: 33 × 37 × 5 cm.\r\n\r\n\r\n\r\n', '\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n', 'Trilha Adaptado', 'Presente', 'product'),
+(29, 4, 2, 2, '2023-11-10 05:14:02', 'Bola com Guizo', 'bola-com-guizo', 'bola1.png', 'bola2.png', 'bola3.png', 80, 65, '\r\n\r\nA Bola com guizo é uma bola adaptada com um guizo na parte interna da bola, possibilitando que o usuário localize a bola através do som emitido pelo guizo, tornando-a acessível para pessoas com deficiência visual.\r\n\r\n', '\r\n\r\nPeso: Não aplicável | Dimensões: Não aplicável\r\n\r\n\r\n', '\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n', 'Bola Sensorial', 'Presente', 'product'),
+(30, 4, 4, 2, '2023-11-10 03:02:02', 'Dominó Adaptado', 'domino-adaptado', 'domino1.png', 'domino2.png', 'IMG_2257.JPG', 200, 140, 'O Jogo de Dominó adaptado é um jogo de dominó com marcações táteis em suas peças, tornando-o acessível para pessoas com deficiência visual. O Jogo de Dominó adaptado é um jogo muito divertido, que pode ser jogado por até 04 jogadores.', 'Tabuleiro em formato retangular de 35,5cm x 34,5cm x 0,9cm (largura x comprimento x espessura), confeccionado em MDF. Dentro do tabuleiro, há cavidades de 0,3cm de profundidade em formato retangular para receber as peças do jogo. O Jogo possui 28 peças. As peças são em formato retangular, confeccionadas em MDF com dimensões de 2,5cm x 5,0cm x de 0,9cm (comprimento x largura x espessura), contendo pinos táteis em sua superfície para diferenciação tátil. As peças possuem um ressalto central de separação dos valores das peças.', '\r\n\r\n\r\n\r\n\r\n\r\n', 'Dominó Adaptado', 'Oferta', 'product'),
+(31, 4, 3, 4, '2023-11-10 05:14:10', 'Linkimals - Pinguim ', 'brinquedo-de-apredizagem', 'Pinguim.png', 'pinguim2.png', 'pinguim3.png', 480, 450, '\r\n\r\n\r\n\r\nO brinquedo musical Fisher-Price Linkimals Cool Beats Penguin é um parceiro de dança super relaxante para bebês com músicas novas, luzes multicoloridas e movimentos de improvisação. Quando as crianças pressionam os botões, o pinguim bate as nadadeiras e balança de um lado para o outro enquanto músicas e frases apresentam o alfabeto, os opostos e muito mais. E quando esse amigo pinguim se encontra com outros amigos do Linkimals, eles se iluminam, conversam, cantam e brincam juntos! (Brinquedos adicionais da Linkimals vendidos separadamente e sujeitos à disponibilidade. )\r\n\r\n\r\n\r\n', '\r\n\r\n\r\n\r\nMarca: Fisher-Price | Modelo: Linkimals Cool Beats - Pinguim | Material: Plástico resistente e seguro para crianças | Dimensões: 20 cm x 15 cm x 30 cm | Idade Recomendada: 6 meses a 3 anos.\r\n\r\n\r\n\r\n\r\n\r\n', '\r\n\r\n\r\n\r\nVídeo Indisponível.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n', 'Pinguim Adaptado', 'Presente', 'product'),
+(32, 4, 2, 2, '2023-11-10 05:14:17', 'Triângulo Soma', 'triangulo-soma', 'triangulo.png', 'soma.png', 'Triângulo-soma-1-1450x1450.png', 80, 60, '\r\n\r\nO Jogo Triângulo Soma é um quebra-cabeças matemático, do tipo “triângulo mágico”, acessível para pessoas com deficiência visual. Objetivo --> Posicionar as peças numeradas de 1 a 6 (Soma 09, 10, 11 ou 12) ou de 1 a 9 (Soma 17) de modo que a soma dos lados do triângulo sejam iguais a 09, 10, 11 ou 12 ou 17 (Soma 17).\r\n\r\n', '\r\n\r\nPeso: Não aplicável | Dimensões: Não aplicável |Tipo De Triângulo Soma | Soma 09, 10, 11 ou 12, Soma 17.\r\n\r\n\r\n\r\n\r\n\r\n', '\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n', 'Trilha Adaptado', 'Oferta', 'product'),
+(33, 4, 2, 3, '2023-11-10 05:14:23', 'Dice Roller Adaptado', 'dice-roller', 'Dice.jpg', '61PKL4Z5LKL._AC_SX679__resized.jpg', 'dados-soltos_resized.jpg', 180, 150, '\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nNosso rolo de dados tem como objetivo promover a independência de pessoas com deficiências físicas ou cognitivas, como paralisia cerebral ou autismo. Basta conectar um interruptor de acessibilidade padrão para facilitar o uso do item. Também pode ser uma ótima ferramenta de ensino para professores de educação especial, terapeutas ocupacionais, físicos e fonoaudiólogos, ou qualquer pessoa com necessidades sensoriais!\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n', '\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPeso leve e tamanho compacto, fácil de transportar e armazenar. - Nota: use 2 pilhas AA (não incluídas) | Textura confortável e suave, você se sentirá bem em sua mão | Copo de rolo de dados automático e facilmente portátil, adequado para festas ao ar livre ou entretenimento em bares | Feito de material premium para uso durável e duradouro | Ótima opção para entretenimento em clube, KTV, bar, pub, etc.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n', '\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nVídeo Indisponível.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n', 'Dice Roller', 'Presente', 'product'),
+(34, 4, 2, 2, '2023-11-10 05:14:30', 'Cubo Mágico Adaptado', 'cubo-magico-adaptado', 'Cubo-magico-adaptado-para-deficientes-visuais-faces-branca-azul-e-laranja.png', 'cubo.png', 'amarela.png', 120, 80, '\r\nO Cubo Mágico 3x3x3 Blind Cube Touch é um cubo mágico adaptado para pessoas com deficiência visual. O cubo mágico adaptado possui texturas em suas faces, de modo que o deficiente visual consiga identificar as faces tatilmente.\r\n', '\r\nCor do cubo: Preto com Cores em Tiled (Peças de plástico) | Cores das faces: Branca, amarela, azul, verde, vermelha e laranja | Relevos das faces: Lisa/ sem relevo, estrelas, corações, círculos, bolinhas e quadrados | Marca: YJ-Moyu\r\n| Modelo: Blind Cube Touch | Tamanho: 6 cm x 6 cm x 6 cm | Peso: 90g.\r\n\r\n\r\n\r\n', '\r\nVídeo Indisponível.\r\n', 'Cubo Mágico', 'Oferta', 'product');
 
 -- --------------------------------------------------------
 
@@ -528,7 +511,7 @@ ALTER TABLE `contact_us`
 -- AUTO_INCREMENT de tabela `coupons`
 --
 ALTER TABLE `coupons`
-  MODIFY `coupon_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `coupon_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de tabela `customers`
@@ -540,7 +523,7 @@ ALTER TABLE `customers`
 -- AUTO_INCREMENT de tabela `customer_orders`
 --
 ALTER TABLE `customer_orders`
-  MODIFY `order_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `order_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT de tabela `manufacturers`
@@ -564,7 +547,7 @@ ALTER TABLE `payments`
 -- AUTO_INCREMENT de tabela `pending_orders`
 --
 ALTER TABLE `pending_orders`
-  MODIFY `order_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `order_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT de tabela `products`
@@ -582,7 +565,7 @@ ALTER TABLE `product_categories`
 -- AUTO_INCREMENT de tabela `wishlist`
 --
 ALTER TABLE `wishlist`
-  MODIFY `wishlist_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `wishlist_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

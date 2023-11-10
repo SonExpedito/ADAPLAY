@@ -8,48 +8,48 @@ if (!isset($_SESSION['admin_email'])) {
 
 ?>
 
-   
-<div class="row"><!-- 1 linha começa -->
 
-<div class="col-lg-12"><!-- col-lg-12 Inicia -->
+    <div class="row"><!-- 1 linha começa -->
 
-    <ol class="breadcrumb"><!-- breadcrumb Inicia -->
+        <div class="col-lg-12"><!-- col-lg-12 Inicia -->
+
+            <ol class="breadcrumb"><!-- breadcrumb Inicia -->
 
                 <li class="active">
 
                     <i class="fa fa-dashboard"></i> Dashboard / Ver Clientes
 
                 </li>
-                </ol><!-- breadcrumb Termina -->
+            </ol><!-- breadcrumb Termina -->
 
-</div><!-- col-lg-12 Termina -->
+        </div><!-- col-lg-12 Termina -->
 
-</div><!-- Fim de 1 linha -->
+    </div><!-- Fim de 1 linha -->
 
-<div class="row"><!-- Início de 2 linhas -->
+    <div class="row"><!-- Início de 2 linhas -->
 
-<div class="col-lg-12"><!-- col-lg-12 Inicia -->
+        <div class="col-lg-12"><!-- col-lg-12 Inicia -->
 
-    <div class="panel panel-default"><!-- panel panel-default Inicia -->
+            <div class="panel panel-default"><!-- panel panel-default Inicia -->
 
-        <div class="panel-heading"><!-- panel-heading Inicia -->
+                <div class="panel-heading"><!-- panel-heading Inicia -->
 
                     <h3 class="panel-title">
-                      <!-- panel-title Inicia -->
+                        <!-- panel-title Inicia -->
 
                         <i class="fa fa-money fa-fw"></i> Ver Clientes
 
-                        </h3><!-- panel-title Termina -->
+                    </h3><!-- panel-title Termina -->
 
-</div><!-- cabeçalho do painel Termina -->
+                </div><!-- cabeçalho do painel Termina -->
 
 
-<div class="panel-body"><!-- panel-body Inicia -->
+                <div class="panel-body"><!-- panel-body Inicia -->
 
-    <div class="table-responsive"><!-- table-responsive Inicia -->
+                    <div class="table-responsive"><!-- table-responsive Inicia -->
 
                         <table class="table table-bordered table-hover table-striped">
-<!-- table table-bordered table-hover table-striped Inicia -->
+                            <!-- table table-bordered table-hover table-striped Inicia -->
 
                             <thead><!-- thead Inicia -->
 
@@ -67,10 +67,10 @@ if (!isset($_SESSION['admin_email'])) {
 
                                 </tr>
 
-                                </thead><!-- thead Termina -->
+                            </thead><!-- thead Termina -->
 
 
-                               <tbody><!-- tbody Inicia -->
+                            <tbody><!-- tbody Inicia -->
 
                                 <?php
 
@@ -136,21 +136,21 @@ if (!isset($_SESSION['admin_email'])) {
                                 <?php } ?>
 
 
-                                </tbody><!-- tbody Termina -->
+                            </tbody><!-- tbody Termina -->
 
 
 
-</table><!-- table table-bordered table-hover table-striped Ends -->
+                        </table><!-- table table-bordered table-hover table-striped Ends -->
 
-</div><!-- Fim responsivo à tabela -->
+                    </div><!-- Fim responsivo à tabela -->
 
-</div><!-- painel-body Termina -->
+                </div><!-- painel-body Termina -->
 
 
-</div><!-- painel panel-default Termina -->
+            </div><!-- painel panel-default Termina -->
 
-</div><!-- col-lg-12 Termina -->
+        </div><!-- col-lg-12 Termina -->
 
-</div><!-- Fim de 2 linhas -->
+    </div><!-- Fim de 2 linhas -->
 
 <?php } ?>

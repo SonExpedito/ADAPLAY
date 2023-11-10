@@ -10,11 +10,11 @@ if (!isset($_SESSION['admin_email'])) {
 ?>
 
 
-<div class="row"><!-- 1 linha começa -->
+    <div class="row"><!-- 1 linha começa -->
 
-<div class="col-lg-12"><!-- col-lg-12 Inicia -->
+        <div class="col-lg-12"><!-- col-lg-12 Inicia -->
 
-    <ol class="breadcrumb"><!-- breadcrumb Inicia -->
+            <ol class="breadcrumb"><!-- breadcrumb Inicia -->
 
 
                 <li class="active">
@@ -25,15 +25,15 @@ if (!isset($_SESSION['admin_email'])) {
 
 
 
-                </ol><!-- breadcrumb Termina -->
+            </ol><!-- breadcrumb Termina -->
 
-</div><!-- col-lg-12 Termina -->
+        </div><!-- col-lg-12 Termina -->
 
-</div><!-- Fim de 1 linha -->
+    </div><!-- Fim de 1 linha -->
 
-<div class="row"><!-- Início de 2 linhas -->
+    <div class="row"><!-- Início de 2 linhas -->
 
-<div class="col-lg-12"><!-- col-lg-12 Inicia -->
+        <div class="col-lg-12"><!-- col-lg-12 Inicia -->
 
             <div class="panel panel-default"><!-- panel panel-default Inicia -->
 
@@ -61,21 +61,21 @@ if (!isset($_SESSION['admin_email'])) {
 
                                 <input type="text" name="admin_name" class="form-control" required>
 
-                                </div><!-- col-md-6 Termina -->
+                            </div><!-- col-md-6 Termina -->
 
-                                    </div><!-- form-group Termina -->
+                        </div><!-- form-group Termina -->
 
 
-                                    <div class="form-group"><!-- form-group Inicia -->
+                        <div class="form-group"><!-- form-group Inicia -->
 
                             <label class="col-md-3 control-label">Email do Usuário: </label>
 
                             <div class="col-md-6"><!-- col-md-6 Inicia -->
 
                                 <input type="text" name="admin_email" class="form-control" required>
-                                </div><!-- col-md-6 Termina -->
+                            </div><!-- col-md-6 Termina -->
 
-                               </div><!-- form-group Termina -->
+                        </div><!-- form-group Termina -->
 
 
                         <div class="form-group"><!-- form-group Inicia -->
@@ -86,11 +86,11 @@ if (!isset($_SESSION['admin_email'])) {
 
                                 <input type="password" name="admin_pass" class="form-control" required>
 
-                                </div><!-- col-md-6 Termina -->
+                            </div><!-- col-md-6 Termina -->
 
-                                    </div><!-- form-group Termina -->
+                        </div><!-- form-group Termina -->
 
-                                    <div class="form-group"><!-- form-group Inicia -->
+                        <div class="form-group"><!-- form-group Inicia -->
 
                             <label class="col-md-3 control-label">País do Usuário </label>
 
@@ -98,12 +98,12 @@ if (!isset($_SESSION['admin_email'])) {
 
                                 <input type="text" name="admin_country" class="form-control" required>
 
-                                </div><!-- col-md-6 Termina -->
+                            </div><!-- col-md-6 Termina -->
 
-                                </div><!-- form-group Termina -->
+                        </div><!-- form-group Termina -->
 
 
-                                <div class="form-group"><!-- form-group Inicia -->
+                        <div class="form-group"><!-- form-group Inicia -->
 
                             <label class="col-md-3 control-label">Trabalho do usuário: </label>
 
@@ -111,12 +111,12 @@ if (!isset($_SESSION['admin_email'])) {
 
                                 <input type="text" name="admin_job" class="form-control" required>
 
-                                </div><!-- col-md-6 Termina -->
+                            </div><!-- col-md-6 Termina -->
 
-                                </div><!-- form-group Termina -->
+                        </div><!-- form-group Termina -->
 
 
-                                <div class="form-group"><!-- form-group Inicia -->
+                        <div class="form-group"><!-- form-group Inicia -->
 
                             <label class="col-md-3 control-label">Contato do Usuário: </label>
 
@@ -124,9 +124,9 @@ if (!isset($_SESSION['admin_email'])) {
 
                                 <input type="text" name="admin_contact" class="form-control" required>
 
-                                </div><!-- col-md-6 Termina -->
+                            </div><!-- col-md-6 Termina -->
 
-                                </div><!-- form-group Termina -->
+                        </div><!-- form-group Termina -->
 
 
                         <div class="form-group"><!-- form-group Inicia -->
@@ -137,11 +137,11 @@ if (!isset($_SESSION['admin_email'])) {
 
                                 <textarea name="admin_about" class="form-control" rows="3"> </textarea>
 
-                                </div><!-- col-md-6 Termina -->
+                            </div><!-- col-md-6 Termina -->
 
-                                </div><!-- form-group Termina -->
+                        </div><!-- form-group Termina -->
 
-                                <div class="form-group"><!-- form-group Inicia -->
+                        <div class="form-group"><!-- form-group Inicia -->
 
                             <label class="col-md-3 control-label">Imagem do Usuário: </label>
 
@@ -149,12 +149,12 @@ if (!isset($_SESSION['admin_email'])) {
 
                                 <input type="file" name="admin_image" class="form-control" required>
 
-                                </div><!-- col-md-6 Termina -->
+                            </div><!-- col-md-6 Termina -->
 
-                                </div><!-- form-group Termina -->
+                        </div><!-- form-group Termina -->
 
 
-                                <div class="form-group"><!-- form-group Inicia -->
+                        <div class="form-group"><!-- form-group Inicia -->
 
                             <label class="col-md-3 control-label"></label>
 
@@ -162,21 +162,21 @@ if (!isset($_SESSION['admin_email'])) {
 
                                 <input type="submit" name="submit" value="Inserir Usuário" class="btn btn-primary form-control">
 
-                                </div><!-- col-md-6 Termina -->
+                            </div><!-- col-md-6 Termina -->
 
-                                </div><!-- form-group Termina -->
-
-
-                                </form><!-- form-horizontal Termina -->
-
-                                </div><!-- painel-body Termina -->
-
-                                </div><!-- painel panel-default Termina -->
-
-                                </div><!-- col-lg-12 Termina -->
+                        </div><!-- form-group Termina -->
 
 
-                                </div><!-- Fim de 2 linhas -->
+                    </form><!-- form-horizontal Termina -->
+
+                </div><!-- painel-body Termina -->
+
+            </div><!-- painel panel-default Termina -->
+
+        </div><!-- col-lg-12 Termina -->
+
+
+    </div><!-- Fim de 2 linhas -->
 
     <?php
 

@@ -531,7 +531,7 @@ img {
   margin-right: 0;
 }
 
-.page-header__bottomline .main-nav .categories__item:hover>.dropdown {
+.page-header__bottomline .main-nav .categories__item:hover > .dropdown {
   display: block;
   -webkit-transform-origin: top;
   transform-origin: top;
@@ -1001,11 +1001,11 @@ img {
   border-top: 1px solid #eee;
 }
 
-.wrapper> :first-child {
+.wrapper > :first-child {
   margin-top: 0;
 }
 
-.wrapper> :last-child {
+.wrapper > :last-child {
   margin-bottom: 0;
 }
 
@@ -1302,5 +1302,40 @@ nav {
   .logozinha span {
     display: none;
   }
+}
 
+#carrinhoVazio {
+  display: none;
+  text-align: center;
+  margin-top: 13vh;
+  background-color: #fff;
+  padding: 20px;
+  border: 2px solid #ccc; /* Borda para um visual mais minimalista */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#carrinhoVazio p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+#continuarComprandoBtn {
+  display: inline-block;
+  font-size: 16px;
+  background-color: #ff7f32;
+  color: #fff;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+#continuarComprandoBtn i {
+  margin-right: 8px;
+}
+
+#continuarComprandoBtn:hover {
+  background-color: #00c8c8;
 }

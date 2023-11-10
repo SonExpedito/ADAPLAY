@@ -25,106 +25,106 @@ if (!isset($_SESSION['admin_email'])) {
   </head>
 
   <body>
-<!-- Início da linha -->
-<div class="row"><!-- início da linha -->
+    <!-- Início da linha -->
+    <div class="row"><!-- início da linha -->
 
-  <!-- Início da coluna-lg-12 -->
-  <div class="col-lg-12"><!-- col-lg-12 Inicia -->
+      <!-- Início da coluna-lg-12 -->
+      <div class="col-lg-12"><!-- col-lg-12 Inicia -->
 
-    <!-- Início da trilha de navegação -->
-    <ol class="breadcrumb"><!-- breadcrumb Inicia -->
+        <!-- Início da trilha de navegação -->
+        <ol class="breadcrumb"><!-- breadcrumb Inicia -->
 
-      <li class="active">
+          <li class="active">
 
-        <i class="fa fa-dashboard"> </i> Dashboard / Inserir Produtos
+            <i class="fa fa-dashboard"> </i> Dashboard / Inserir Produtos
 
-      </li>
+          </li>
 
-      </ol><!-- breadcrumb Termina -->
-    <!-- Fim da trilha de navegação -->
+        </ol><!-- breadcrumb Termina -->
+        <!-- Fim da trilha de navegação -->
 
-  </div><!-- col-lg-12 Termina -->
-  <!-- Fim da coluna-lg-12 -->
+      </div><!-- col-lg-12 Termina -->
+      <!-- Fim da coluna-lg-12 -->
 
-</div><!-- Fim da linha -->
-<!-- Fim da linha -->
+    </div><!-- Fim da linha -->
+    <!-- Fim da linha -->
 
-<!-- Início da 2ª linha -->
-<div class="row"><!-- Início de 2 linhas -->
+    <!-- Início da 2ª linha -->
+    <div class="row"><!-- Início de 2 linhas -->
 
-  <!-- Início da coluna-lg-12 -->
-  <div class="col-lg-12"><!-- col-lg-12 Inicia -->
+      <!-- Início da coluna-lg-12 -->
+      <div class="col-lg-12"><!-- col-lg-12 Inicia -->
 
-    <!-- Início do painel padrão -->
-    <div class="panel panel-default"><!-- panel panel-default Inicia -->
+        <!-- Início do painel padrão -->
+        <div class="panel panel-default"><!-- panel panel-default Inicia -->
 
-      <!-- Início do cabeçalho do painel -->
-      <div class="panel-heading"><!-- panel-heading Inicia -->
+          <!-- Início do cabeçalho do painel -->
+          <div class="panel-heading"><!-- panel-heading Inicia -->
 
-        <!-- Início do título do painel -->
-        <h3 class="panel-title">
+            <!-- Início do título do painel -->
+            <h3 class="panel-title">
 
-          <i class="fa fa-money fa-fw"></i> Inserir Produtos
+              <i class="fa fa-money fa-fw"></i> Inserir Produtos
 
-        </h3>
+            </h3>
 
-        </div><!-- cabeçalho do painel Termina -->
-      <!-- Fim do cabeçalho do painel -->
+          </div><!-- cabeçalho do painel Termina -->
+          <!-- Fim do cabeçalho do painel -->
 
-      <!-- Início do corpo do painel -->
-      <div class="panel-body"><!-- panel-body Inicia -->
+          <!-- Início do corpo do painel -->
+          <div class="panel-body"><!-- panel-body Inicia -->
 
-        <!-- Início do formulário horizontal -->
-        <form class="form-horizontal" method="post" enctype="multipart/form-data"><!-- form-horizontal Starts -->
+            <!-- Início do formulário horizontal -->
+            <form class="form-horizontal" method="post" enctype="multipart/form-data"><!-- form-horizontal Starts -->
 
-          <!-- Início do grupo de formulário -->
-          <div class="form-group"><!-- form-group Inicia -->
+              <!-- Início do grupo de formulário -->
+              <div class="form-group"><!-- form-group Inicia -->
 
-            <label class="col-md-3 control-label"> Titulo do Produto</label>
+                <label class="col-md-3 control-label"> Titulo do Produto</label>
 
-            <div class="col-md-6">
+                <div class="col-md-6">
 
-              <input type="text" name="product_title" class="form-control" required>
+                  <input type="text" name="product_title" class="form-control" required>
 
-            </div>
+                </div>
 
-            </div><!-- form-group Termina -->
-          <!-- Fim do grupo de formulário -->
-
-
-          <!-- Início do grupo de formulário -->
-          <div class="form-group"><!-- form-group Inicia -->
-
-            <label class="col-md-3 control-label"> URL do Produto</label>
-
-            <div class="col-md-6">
-
-              <input type="text" name="product_url" class="form-control" required>
-
-              <br>
-
-              <p style="font-size:15px; font-weight:bold;">
-
-                Exemplo de "URL" : carrinho-adaptado-azul
-
-              </p>
-
-            </div>
-
-            </div><!-- form-group Termina -->
-          <!-- Fim do grupo de formulário -->
+              </div><!-- form-group Termina -->
+              <!-- Fim do grupo de formulário -->
 
 
-          <!-- Início do grupo de formulário -->
-          <div class="form-group"><!-- form-group Inicia -->
-            <label class="col-md-3 control-label"> Selecione um Fabricante </label>
+              <!-- Início do grupo de formulário -->
+              <div class="form-group"><!-- form-group Inicia -->
 
-            <div class="col-md-6">
+                <label class="col-md-3 control-label"> URL do Produto</label>
 
-              <!-- Início da seleção do fabricante -->
-              <select class="form-control" name="manufacturer"><!-- select manufacturer Starts -->
+                <div class="col-md-6">
 
-                <option> Selecione um Fabricante </option>
+                  <input type="text" name="product_url" class="form-control" required>
+
+                  <br>
+
+                  <p style="font-size:15px; font-weight:bold;">
+
+                    Exemplo de "URL" : carrinho-adaptado-azul
+
+                  </p>
+
+                </div>
+
+              </div><!-- form-group Termina -->
+              <!-- Fim do grupo de formulário -->
+
+
+              <!-- Início do grupo de formulário -->
+              <div class="form-group"><!-- form-group Inicia -->
+                <label class="col-md-3 control-label"> Selecione um Fabricante </label>
+
+                <div class="col-md-6">
+
+                  <!-- Início da seleção do fabricante -->
+                  <select class="form-control" name="manufacturer"><!-- select manufacturer Starts -->
+
+                    <option> Selecione um Fabricante </option>
 
                     <?php
 
@@ -140,9 +140,9 @@ $manufacturer_title
                     }
 
                     ?>
-              </select><!-- selecione fabricante Termina -->
+                  </select><!-- selecione fabricante Termina -->
 
-              </div>
+                </div>
 
               </div><!-- form-group Termina -->
 
@@ -154,7 +154,7 @@ $manufacturer_title
 
                   <select name="product_cat" class="form-control">
 
-                    <option> Selecione uma Categoria de Produtos  </option>
+                    <option> Selecione uma Categoria de Produtos </option>
 
 
                     <?php
@@ -180,9 +180,9 @@ $manufacturer_title
 
                 </div>
 
-                            </div><!-- form-group Termina -->
+              </div><!-- form-group Termina -->
 
-            <div class="form-group"><!-- form-group Inicia -->
+              <div class="form-group"><!-- form-group Inicia -->
 
                 <label class="col-md-3 control-label"> Categoria </label>
 
@@ -215,9 +215,9 @@ $manufacturer_title
 
                 </div>
 
-                                </div><!-- form-group Termina -->
+              </div><!-- form-group Termina -->
 
-                <div class="form-group"><!-- form-group Inicia -->
+              <div class="form-group"><!-- form-group Inicia -->
 
                 <label class="col-md-3 control-label"> Primeira Imagem do Produto </label>
 
@@ -227,7 +227,7 @@ $manufacturer_title
 
                 </div>
 
-                              </div><!-- form-group Termina -->
+              </div><!-- form-group Termina -->
 
               <div class="form-group"><!-- form-group Inicia -->
 
@@ -239,9 +239,9 @@ $manufacturer_title
 
                 </div>
 
-                                </div><!-- form-group Termina -->
+              </div><!-- form-group Termina -->
 
-                <div class="form-group"><!-- form-group Inicia -->
+              <div class="form-group"><!-- form-group Inicia -->
 
                 <label class="col-md-3 control-label"> Terceira Imagem do Produto </label>
 
@@ -251,9 +251,9 @@ $manufacturer_title
 
                 </div>
 
-                                </div><!-- form-group Termina -->
+              </div><!-- form-group Termina -->
 
-                <div class="form-group"><!-- form-group Inicia -->
+              <div class="form-group"><!-- form-group Inicia -->
 
                 <label class="col-md-3 control-label"> Preço do Produto </label>
 
@@ -263,10 +263,10 @@ $manufacturer_title
 
                 </div>
 
-              
-                  </div><!-- form-group Termina -->
 
-                  <div class="form-group"><!-- form-group Inicia -->
+              </div><!-- form-group Termina -->
+
+              <div class="form-group"><!-- form-group Inicia -->
                 <label class="col-md-3 control-label"> Preço Promocional do Produto </label>
 
                 <div class="col-md-6">
@@ -275,10 +275,10 @@ $manufacturer_title
 
                 </div>
 
-              
-                  </div><!-- form-group Termina -->
 
-                  <div class="form-group"><!-- form-group Inicia -->
+              </div><!-- form-group Termina -->
+
+              <div class="form-group"><!-- form-group Inicia -->
 
                 <label class="col-md-3 control-label"> Palavras-Chave do Produto </label>
 
@@ -288,15 +288,15 @@ $manufacturer_title
 
                 </div>
 
-                                </div><!-- form-group Termina -->
+              </div><!-- form-group Termina -->
 
-                <div class="form-group"><!-- form-group Inicia -->
+              <div class="form-group"><!-- form-group Inicia -->
 
                 <label class="col-md-3 control-label"> Guias do Produto </label>
 
                 <div class="col-md-6">
 
-                <ul class="nav nav-tabs"><!-- nav nav-tabs Inicia -->
+                  <ul class="nav nav-tabs"><!-- nav nav-tabs Inicia -->
 
                     <li class="active">
 
@@ -316,13 +316,13 @@ $manufacturer_title
 
                     </li>
 
-                 
-                        </ul><!-- nav nav-tabs Fim -->
 
-                        <div class="tab-content"><!-- tab-content Inicia -->
+                  </ul><!-- nav nav-tabs Fim -->
+
+                  <div class="tab-content"><!-- tab-content Inicia -->
 
                     <div id="description" class="tab-pane fade in active">
-<!-- descrição do painel da guia desaparece nas partidas ativas -->
+                      <!-- descrição do painel da guia desaparece nas partidas ativas -->
 
                       <br>
 
@@ -355,14 +355,14 @@ $manufacturer_title
 
 </textarea>
 
-                </div><!-- painel da guia de vídeo desaparece nas extremidades -->
+                    </div><!-- painel da guia de vídeo desaparece nas extremidades -->
 
 
-                </div><!-- tab-content Termina -->
+                  </div><!-- tab-content Termina -->
 
                 </div>
 
-                </div><!-- form-group Termina -->
+              </div><!-- form-group Termina -->
 
               <div class="form-group"><!-- form-group Inicia -->
 
@@ -373,9 +373,9 @@ $manufacturer_title
                   <input type="text" name="product_label" class="form-control" required>
 
                 </div>
-                </div><!-- form-group Termina -->
+              </div><!-- form-group Termina -->
 
-               <div class="form-group"><!-- form-group Inicia -->
+              <div class="form-group"><!-- form-group Inicia -->
 
                 <label class="col-md-3 control-label"></label>
 
@@ -385,17 +385,17 @@ $manufacturer_title
 
                 </div>
 
-                </div><!-- form-group Termina -->
+              </div><!-- form-group Termina -->
 
-</form><!-- form-horizontal Termina -->
+            </form><!-- form-horizontal Termina -->
 
-</div><!-- painel-body Termina -->
+          </div><!-- painel-body Termina -->
 
-</div><!-- painel panel-default Termina -->
+        </div><!-- painel panel-default Termina -->
 
-</div><!-- col-lg-12 Termina -->
+      </div><!-- col-lg-12 Termina -->
 
-</div><!-- Fim de 2 linhas -->
+    </div><!-- Fim de 2 linhas -->
 
 
 

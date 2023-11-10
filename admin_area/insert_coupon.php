@@ -8,131 +8,147 @@ if (!isset($_SESSION['admin_email'])) {
 
 
 ?>
-<div class="linha"><!-- Início da 1ª linha -->
+    <div class="row"><!-- Início da 1ª linha -->
 
-<div class="coluna-lg-12"><!-- Início da coluna-lg-12 -->
+        <div class="col-lg-12"><!-- Início da coluna-lg-12 -->
 
-    <ol class="trilha"><!-- Início da trilha -->
+            <ol class="breadcrumb"><!-- Início da trilha -->
 
-        <li class="ativa">
+                <li class="active">
 
-            <i class="fa fa-dashboard"> </i> Painel / Inserir Cupons
+                    <i class="fa fa-dashboard"> </i> Painel / Inserir Cupons
 
-        </li>
+                </li>
 
-    </ol><!-- Fim da trilha -->
+            </ol><!-- Fim da trilha -->
 
-</div><!-- Fim da coluna-lg-12 -->
+        </div><!-- Fim da coluna-lg-12 -->
 
-</div><!-- Fim da 1ª linha -->
+    </div><!-- Fim da 1ª linha -->
 
-<div class="linha"><!-- Início da 2ª linha -->
+    <div class="row"><!-- Início da 2ª linha -->
 
-<div class="coluna-lg-12"><!-- Início da coluna-lg-12 -->
+        <div class="col-lg-12"><!-- Início da coluna-lg-12 -->
 
-    <div class="painel painel-padrao"><!-- Início do painel padrão -->
+            <div class="panel panel-default"><!-- Início do painel padrão -->
 
-        <div class="cabecalho-painel"><!-- Início do cabeçalho do painel -->
+                <div class="panel-heading"><!-- Início do cabeçalho do painel -->
 
-            <h3 class="titulo-painel"><!-- Início do título do painel -->
+                    <h3 class="panel-title"><!-- Início do título do painel -->
 
-                <i class="fa fa-money fa-fw"> </i> Inserir Cupons
+                        <i class="fa fa-money fa-fw"> </i> Inserir Cupons
 
-            </h3><!-- Fim do título do painel -->
+                    </h3><!-- Fim do título do painel -->
 
-        </div><!-- Fim do cabeçalho do painel -->
+                </div><!-- Fim do cabeçalho do painel -->
 
-        <div class="corpo-painel"><!-- Início do corpo do painel -->
+                <div class="panel-body"><!-- Início do corpo do painel -->
 
-            <form class="form-horizontal" method="post" action=""><!-- Início do formulário horizontal -->
+                    <form class="form-horizontal" method="post" action=""><!-- Início do formulário horizontal -->
 
-                <div class="grupo-formulario"><!-- Início do grupo de formulário -->
+                        <div class="form-group"><!-- Início do grupo de formulário -->
 
-                    <label class="col-md-3 etiqueta-controle"> Título do Cupom </label>
+                            <label class="col-md-3 control-label"> Título do Cupom </label>
 
-                    <div class="col-md-6">
+                            <div class="col-md-6">
 
-                        <input type="text" name="coupon_title" class="form-control">
+                                <input type="text" name="coupon_title" class="form-control">
 
-                    </div>
+                            </div>
 
-                </div><!-- Fim do grupo de formulário -->
+                        </div><!-- Fim do grupo de formulário -->
 
-                <div class="grupo-formulario"><!-- Início do grupo de formulário -->
+                        <div class="form-group"><!-- Início do grupo de formulário -->
 
-                    <label class="col-md-3 etiqueta-controle"> Preço do Cupom </label>
+                            <label class="col-md-3 control-label"> Preço do Cupom </label>
 
-                    <div class="col-md-6">
+                            <div class="col-md-6">
 
-                        <input type="text" name="coupon_price" class="form-control">
+                                <input type="text" name="coupon_price" class="form-control">
 
-                    </div>
+                            </div>
 
-                </div><!-- Fim do grupo de formulário -->
+                        </div><!-- Fim do grupo de formulário -->
 
-                <div class="grupo-formulario"><!-- Início do grupo de formulário -->
+                        <div class="form-group"><!-- Início do grupo de formulário -->
 
-                    <label class="col-md-3 etiqueta-controle"> Código do Cupom </label>
+                            <label class="col-md-3 control-label"> Código do Cupom </label>
 
-                    <div class="col-md-6">
+                            <div class="col-md-6">
 
-                        <input type="text" name="coupon_code" class="form-control">
+                                <input type="text" name="coupon_code" class="form-control">
 
-                    </div>
+                            </div>
 
-                </div><!-- Fim do grupo de formulário -->
+                        </div><!-- Fim do grupo de formulário -->
 
-                <div class="grupo-formulario"><!-- Início do grupo de formulário -->
+                        <div class="form-group"><!-- Início do grupo de formulário -->
 
-                    <label class="col-md-3 etiqueta-controle"> Limite do Cupom </label>
+                            <label class="col-md-3 control-label"> Limite do Cupom </label>
 
-                    <div class="col-md-6">
+                            <div class="col-md-6">
 
-                        <input type="number" name="coupon_limit" value="1" class="form-control">
+                                <input type="number" name="coupon_limit" value="1" class="form-control">
 
-                    </div>
+                            </div>
 
-                </div><!-- Fim do grupo de formulário -->
+                        </div><!-- Fim do grupo de formulário -->
 
-                <div class="grupo-formulario"><!-- Início do grupo de formulário -->
+                        <div class="form-group"><!-- Início do grupo de formulário -->
 
-                    <label class="col-md-3 etiqueta-controle"> Qual Produto Receberá o Cupom? </label>
+                            <label class="col-md-3 control-label"> Qual Produto Receberá o Cupom? </label>
 
-                    <div class="col-md-6">
+                            <div class="col-md-6">
 
-                        <select name="product_id" class="form-control">
+                                <select name="product_id" class="form-control">
 
-                            <option> Selecione o Produto </option>
+                                    <option> Selecione o Produto </option>
 
-                            <!-- Código PHP omitido para brevidade -->
+                                    <?php
 
-                        </select>
+                                    $get_p = "select * from products where status='product'";
 
-                    </div>
+                                    $run_p = mysqli_query($con, $get_p);
 
-                </div><!-- Fim do grupo de formulário -->
+                                    while ($row_p = mysqli_fetch_array($run_p)) {
 
-                <div class="grupo-formulario"><!-- Início do grupo de formulário -->
+                                        $p_id = $row_p['product_id'];
 
-                    <label class="col-md-3 etiqueta-controle"> </label>
+                                        $p_title = $row_p['product_title'];
 
-                    <div class="col-md-6">
+                                        echo "<option value='$p_id'> $p_title </option>";
+                                    }
 
-                        <input type="submit" name="submit" class="btn btn-primary form-control" value=" Inserir Cupom ">
+                                    ?>
 
-                    </div>
+                                </select>
 
-                </div><!-- Fim do grupo de formulário -->
+                            </div>
 
-            </form><!-- Fim do formulário horizontal -->
+                        </div><!-- Fim do grupo de formulário -->
 
-        </div><!-- Fim do corpo do painel -->
+                        <div class="form-group"><!-- Início do grupo de formulário -->
 
-    </div><!-- Fim do painel padrão -->
+                            <label class="col-md-3 control-label"> </label>
 
-</div><!-- Fim da coluna-lg-12 -->
+                            <div class="col-md-6">
 
-</div><!-- Fim da 2ª linha -->
+                                <input type="submit" name="submit" class="btn btn-primary form-control" value=" Inserir Cupom ">
+
+                            </div>
+
+                        </div><!-- Fim do grupo de formulário -->
+
+                    </form><!-- Fim do formulário horizontal -->
+
+                </div><!-- Fim do corpo do painel -->
+
+            </div><!-- Fim do painel padrão -->
+
+        </div><!-- Fim da coluna-lg-12 -->
+
+    </div><!-- Fim da 2ª linha -->
+
     <?php
 
     if (isset($_POST['submit'])) {

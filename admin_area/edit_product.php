@@ -124,18 +124,18 @@ if (!isset($_SESSION['admin_email'])) {
 
       </div><!-- col-lg-12 Termina -->
 
-    </div>
-<!-- Fim da linha -->
+    </div> <!-- Fim da linha -->
 
-<div class="linha"><!-- Início da 2ª linha -->
 
-      <div class="coluna-lg-12"><!-- Início da coluna-lg-12 -->
+    <div class="row"><!-- Início da 2ª linha -->
 
-        <div class="painel painel-padrao"><!-- Início do painel padrão -->
+      <div class="col-lg-12"><!-- Início da coluna-lg-12 -->
 
-          <div class="cabecalho-painel"><!-- Início do cabeçalho do painel -->
+        <div class="panel panel-default"><!-- Início do painel padrão -->
 
-            <h3 class="titulo-painel">
+          <div class="panel-heading"><!-- Início do cabeçalho do painel -->
+
+            <h3 class="panel-title">
 
               <i class="fa fa-money fa-fw"></i> Editar Produtos
 
@@ -143,30 +143,30 @@ if (!isset($_SESSION['admin_email'])) {
 
           </div><!-- Fim do cabeçalho do painel -->
 
-          <div class="corpo-painel"><!-- Início do corpo do painel -->
+          <div class="panel-body"><!-- Início do corpo do painel -->
 
             <form class="form-horizontal" method="post" enctype="multipart/form-data"><!-- Início do formulário horizontal -->
 
-              <div class="grupo-formulario"><!-- Início do grupo de formulário -->
+              <div class="form-group"><!-- Início do grupo de formulário -->
 
-                <label class="col-md-3 etiqueta-controle"> Título do Produto </label>
+                <label class="col-md-3 control-label"> Título do Produto </label>
 
                 <div class="col-md-6">
 
-                  <input type="text" name="product_title" class="form-control" required value="">
+                  <input type="text" name="product_title" class="form-control" required value="<?php echo $p_title; ?>">
 
                 </div>
 
               </div><!-- Fim do grupo de formulário -->
 
 
-              <div class="grupo-formulario"><!-- Início do grupo de formulário -->
+              <div class="form-group"><!-- Início do grupo de formulário -->
 
-                <label class="col-md-3 etiqueta-controle"> URL do Produto </label>
+                <label class="col-md-3 control-label"> URL do Produto </label>
 
                 <div class="col-md-6">
 
-                  <input type="text" name="product_url" class="form-control" required value="">
+                  <input type="text" name="product_url" class="form-control" required value="<?php echo $p_url; ?>">
 
                   <br>
 
@@ -180,19 +180,38 @@ if (!isset($_SESSION['admin_email'])) {
 
               </div><!-- Fim do grupo de formulário -->
 
-              <div class="grupo-formulario"><!-- Início do grupo de formulário -->
+              <div class="form-group"><!-- Início do grupo de formulário -->
 
-                <label class="col-md-3 etiqueta-controle"> Selecione um Fabricante </label>
+                <label class="col-md-3 control-label"> Selecione um Fabricante </label>
 
                 <div class="col-md-6">
 
                   <select name="manufacturer" class="form-control">
 
-                    <option value="">
-                     
+                    <option value="<?php echo $manufacturer_id; ?>">
+                      <?php echo $manufacturer_title; ?>
                     </option>
 
-                    <!-- Código PHP omitido para brevidade -->
+                    <?php
+
+                    $get_manufacturer = "select * from manufacturers";
+
+                    $run_manufacturer = mysqli_query($con, $get_manufacturer);
+
+                    while ($row_manfacturer = mysqli_fetch_array($run_manufacturer)) {
+
+                      $manufacturer_id = $row_manfacturer['manufacturer_id'];
+
+                      $manufacturer_title = $row_manfacturer['manufacturer_title'];
+
+                      echo "
+<option value='$manufacturer_id'>
+$manufacturer_title
+</option>
+";
+                    }
+
+                    ?>
 
                   </select>
 
@@ -200,17 +219,35 @@ if (!isset($_SESSION['admin_email'])) {
 
               </div><!-- Fim do grupo de formulário -->
 
-              <div class="grupo-formulario"><!-- Início do grupo de formulário -->
+              <div class="form-group"><!-- Início do grupo de formulário -->
 
-                <label class="col-md-3 etiqueta-controle"> Categoria de Produto </label>
+                <label class="col-md-3 control-label"> Categoria de Produto </label>
 
                 <div class="col-md-6">
 
                   <select name="product_cat" class="form-control">
 
-                    <option value=""> </option>
+                    <option value="<?php echo $p_cat; ?>"> <?php echo $p_cat_title; ?> </option>
 
-                    <!-- Código PHP omitido para brevidade -->
+
+                    <?php
+
+                    $get_p_cats = "select * from product_categories";
+
+                    $run_p_cats = mysqli_query($con, $get_p_cats);
+
+                    while ($row_p_cats = mysqli_fetch_array($run_p_cats)) {
+
+                      $p_cat_id = $row_p_cats['p_cat_id'];
+
+                      $p_cat_title = $row_p_cats['p_cat_title'];
+
+                      echo "<option value='$p_cat_id' >$p_cat_title</option>";
+                    }
+
+
+                    ?>
+
 
                   </select>
 
@@ -218,17 +255,33 @@ if (!isset($_SESSION['admin_email'])) {
 
               </div><!-- Fim do grupo de formulário -->
 
-              <div class="grupo-formulario"><!-- Início do grupo de formulário -->
+              <div class="form-group"><!-- Início do grupo de formulário -->
 
-                <label class="col-md-3 etiqueta-controle"> Categoria </label>
+                <label class="col-md-3 control-label"> Categoria </label>
 
                 <div class="col-md-6">
 
                   <select name="cat" class="form-control">
 
-                    <option value=""> </option>
+                    <option value="<?php echo $cat; ?>"> <?php echo $cat_title; ?> </option>
 
-                    <!-- Código PHP omitido para brevidade -->
+                    <?php
+
+                    $get_cat = "select * from categories ";
+
+                    $run_cat = mysqli_query($con, $get_cat);
+
+                    while ($row_cat = mysqli_fetch_array($run_cat)) {
+
+                      $cat_id = $row_cat['cat_id'];
+
+                      $cat_title = $row_cat['cat_title'];
+
+                      echo "<option value='$cat_id'>$cat_title</option>";
+                    }
+
+                    ?>
+
 
                   </select>
 
@@ -236,98 +289,98 @@ if (!isset($_SESSION['admin_email'])) {
 
               </div><!-- Fim do grupo de formulário -->
 
-              <div class="grupo-formulario"><!-- Início do grupo de formulário -->
+              <div class="form-group"><!-- Início do grupo de formulário -->
 
-                <label class="col-md-3 etiqueta-controle"> Primeira Imagem do Produto </label>
+                <label class="col-md-3 control-label"> Primeira Imagem do Produto </label>
 
                 <div class="col-md-6">
 
                   <input type="file" name="product_img1" class="form-control">
-                  <br><img src="" width="70" height="70">
+                  <br><img src="product_images/<?php echo $p_image1; ?>" width="70" height="70">
 
                 </div>
 
               </div><!-- Fim do grupo de formulário -->
 
-              <div class="grupo-formulario"><!-- Início do grupo de formulário -->
+              <div class="form-group"><!-- Início do grupo de formulário -->
 
-                <label class="col-md-3 etiqueta-controle"> Segunda Imagem do Produto </label>
+                <label class="col-md-3 control-label"> Segunda Imagem do Produto </label>
 
                 <div class="col-md-6">
 
                   <input type="file" name="product_img2" class="form-control">
-                  <br><img src="" width="70" height="70">
+                  <br><img src="product_images/<?php echo $p_image2; ?>" width="70" height="70">
 
                 </div>
 
               </div><!-- Fim do grupo de formulário -->
 
-              <div class="grupo-formulario"><!-- Início do grupo de formulário -->
+              <div class="form-group"><!-- Início do grupo de formulário -->
 
-                <label class="col-md-3 etiqueta-controle"> 3ª Imagem do Produto </label>
+                <label class="col-md-3 control-label"> 3ª Imagem do Produto </label>
 
                 <div class="col-md-6">
 
                   <input type="file" name="product_img3" class="form-control">
-                  <br><img src="" width="70" height="70">
+                  <br><img src="product_images/<?php echo $p_image3; ?>" width="70" height="70">
 
                 </div>
 
               </div><!-- Fim do grupo de formulário -->
 
-              <div class="grupo-formulario"><!-- Início do grupo de formulário -->
+              <div class="form-group"><!-- Início do grupo de formulário -->
 
-                <label class="col-md-3 etiqueta-controle"> Preço do Produto </label>
+                <label class="col-md-3 control-label"> Preço do Produto </label>
 
                 <div class="col-md-6">
 
-                  <input type="text" name="product_price" class="form-control" required value="">
+                  <input type="text" name="product_price" class="form-control" required value="<?php echo $p_price; ?>">
 
                 </div>
 
               </div><!-- Fim do grupo de formulário -->
 
-              <div class="grupo-formulario"><!-- Início do grupo de formulário -->
+              <div class="form-group"><!-- Início do grupo de formulário -->
 
-                <label class="col-md-3 etiqueta-controle"> Preço Promocional do Produto </label>
+                <label class="col-md-3 control-label"> Preço Promocional do Produto </label>
 
                 <div class="col-md-6">
 
-                  <input type="text" name="psp_price" class="form-control" required value="">
+                  <input type="text" name="psp_price" class="form-control" required value="<?php echo $psp_price; ?>">
 
                 </div>
 
               </div><!-- Fim do grupo de formulário -->
 
-              <div class="grupo-formulario"><!-- Início do grupo de formulário -->
+              <div class="form-group"><!-- Início do grupo de formulário -->
 
-                <label class="col-md-3 etiqueta-controle"> Palavras-Chave do Produto </label>
+                <label class="col-md-3 control-label"> Palavras-Chave do Produto </label>
 
                 <div class="col-md-6">
 
-                  <input type="text" name="product_keywords" class="form-control" required value="">
+                  <input type="text" name="product_keywords" class="form-control" required value="<?php echo $p_keywords; ?>">
 
                 </div>
 
               </div><!-- Fim do grupo de formulário -->
 
-              <div class="grupo-formulario"><!-- Início do grupo de formulário -->
+              <div class="form-group"><!-- Início do grupo de formulário -->
 
-                <label class="col-md-3 etiqueta-controle"> Guias de produtos </label>
+                <label class="col-md-3 control-label"> Guias de produtos </label>
 
                 <div class="col-md-6">
 
                   <ul class="nav nav-tabs"><!-- Início das guias de navegação -->
 
-                    <li class="ativa">
+                    <li class="active">
 
-                      <a data-toggle="tab" href="#descricao"> Descrição do Produto </a>
+                      <a data-toggle="tab" href="#description"> Descrição do Produto </a>
 
                     </li>
 
                     <li>
 
-                      <a data-toggle="tab" href="#caracteristicas"> Especificações do Produto </a>
+                      <a data-toggle="tab" href="#features"> Especificações do Produto </a>
 
                     </li>
 
@@ -339,26 +392,30 @@ if (!isset($_SESSION['admin_email'])) {
 
                   </ul><!-- Fim das guias de navegação -->
 
-                  <div class="conteudo-guia"><!-- Início do conteúdo da guia -->
+                  <div class="tab-content"><!-- Início do conteúdo da guia -->
 
-                    <div id="descricao" class="tab-pane fade in ativa"><!-- Início da guia de descrição -->
+                    <div id="description" class="tab-pane fade in active"><!-- Início da guia de descrição -->
 
                       <br>
 
                       <textarea name="product_desc" class="form-control" rows="15" id="product_desc">
 
-                      </textarea>
+<?php echo $p_desc; ?>
+
+</textarea>
 
                     </div><!-- Fim da guia de descrição -->
 
 
-                    <div id="caracteristicas" class="tab-pane fade in"><!-- Início da guia de características -->
+                    <div id="features" class="tab-pane fade in"><!-- Início da guia de características -->
 
                       <br>
 
                       <textarea name="product_features" class="form-control" rows="15" id="product_features">
 
-                      </textarea>
+<?php echo $p_features; ?>
+
+</textarea>
 
                     </div><!-- Fim da guia de características -->
 
@@ -369,7 +426,9 @@ if (!isset($_SESSION['admin_email'])) {
 
                       <textarea name="product_video" class="form-control" rows="15">
 
-                      </textarea>
+<?php echo $p_video; ?>
+
+</textarea>
 
                     </div><!-- Fim da guia de vídeo -->
 
@@ -380,21 +439,21 @@ if (!isset($_SESSION['admin_email'])) {
 
               </div><!-- Fim do grupo de formulário -->
 
-              <div class="grupo-formulario"><!-- Início do grupo de formulário -->
+              <div class="form-group"><!-- Início do grupo de formulário -->
 
-                <label class="col-md-3 etiqueta-controle"> Rótulo do Produto </label>
+                <label class="col-md-3 control-label"> Rótulo do Produto </label>
 
                 <div class="col-md-6">
 
-                  <input type="text" name="product_label" class="form-control" required value="">
+                  <input type="text" name="product_label" class="form-control" required value="<?php echo $p_label; ?>">
 
                 </div>
 
               </div><!-- Fim do grupo de formulário -->
 
-              <div class="grupo-formulario"><!-- Início do grupo de formulário -->
+              <div class="form-group"><!-- Início do grupo de formulário -->
 
-                <label class="col-md-3 etiqueta-controle"></label>
+                <label class="col-md-3 control-label"></label>
 
                 <div class="col-md-6">
 
@@ -413,6 +472,7 @@ if (!isset($_SESSION['admin_email'])) {
       </div><!-- Fim da coluna-lg-12 -->
 
     </div><!-- Fim da 2ª linha -->
+
   </body>
 
   </html>

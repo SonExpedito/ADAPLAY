@@ -7,7 +7,7 @@ if (!isset($_SESSION['admin_email'])) {
 } else {
 
 
-    ?>
+?>
 
 
     <div class="row"><!-- 1 linha começa -->
@@ -97,7 +97,7 @@ if (!isset($_SESSION['admin_email'])) {
                                     $i++;
 
 
-                                    ?>
+                                ?>
 
 
                                     <tr>
