@@ -320,11 +320,11 @@ if ($check_product == 0) {
                 <?php } else { ?>
 
 
-                  <div class="form-group"><!-- form-group Inicia -->
+                 <!--  <div class="form-group">
 
                     <label class="col-md-5 control-label">Bundle Quantity </label>
 
-                    <div class="col-md-7"><!-- col-md-7 Inicia -->
+                    <div class="col-md-7"> 
 
                       <select name="product_qty" class="form-control">
 
@@ -338,15 +338,15 @@ if ($check_product == 0) {
 
                       </select>
 
-                    </div><!-- col-md-7 Termina -->
+                    </div> col-md-7 Termina 
 
-                  </div><!-- form-group Termina -->
+                  </div> form-group Termina
 
-                  <div class="form-group"><!-- form-group Inicia -->
+                  <div class="form-group"> form-group Inicia
 
                     <label class="col-md-5 control-label">Tamanho do pacote</label>
 
-                    <div class="col-md-7"><!-- col-md-7 Inicia -->
+                    <div class="col-md-7"> col-md-7 Inicia 
 
                       <select name="product_size" class="form-control">
 
@@ -359,10 +359,10 @@ if ($check_product == 0) {
                       </select>
 
 
-                    </div><!-- col-md-7 Termina -->
+                    </div>col-md-7 Termina -->
 
 
-                  </div><!-- form-group Termina -->
+                 <!-- </div>form-group Termina -->
 
 
                 <?php } ?>

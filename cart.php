@@ -40,6 +40,13 @@ include("includes/main.php");
   </div>
 </main>
 
+<div id="carrinhoVazio">
+  <p>Seu carrinho de compras está vazio.</p>
+  <a href="index.php" id="continuarComprandoBtn">
+    <i class="bx bx-shopping-bag"></i> Continuar Comprando
+  </a>
+</div>
+
 <div id="content"><!-- conteúdo Começa -->
   <div class="container"><!-- container Começa -->
     <div class="col-md-9" id="cart"><!-- col-md-9 Começa -->
@@ -101,7 +108,7 @@ include("includes/main.php");
 
                     // Atualiza o total do carrinho
                     $total += $subtotal;
-                    ?>
+                ?>
                     <tr><!-- tr Começa -->
                       <td>
                         <img src="admin_area/product_images/<?php echo $produtoImagem1; ?>">
@@ -113,8 +120,7 @@ include("includes/main.php");
                       </td>
                       <td>
                         <!-- Campo de entrada para a quantidade do produto -->
-                        <input type="text" name="quantity" value="<?php echo $_SESSION['quantidadeProduto']; ?>"
-                          data-product_id="<?php echo $idProduto; ?>" class="quantity form-control">
+                        <input type="text" name="quantity" value="<?php echo $_SESSION['quantidadeProduto']; ?>" data-product_id="<?php echo $idProduto; ?>" class="quantity form-control">
                       </td>
                       <td>
                         R$
@@ -125,15 +131,14 @@ include("includes/main.php");
                       </td>
                       <td>
                         <!-- Caixa de seleção para remover o produto -->
-                        <button name="remove" value="<?php echo $idProduto; ?>" id="deletebutton" autocomplete="off"><i
-                            class='bx bx-trash'></i></button>
+                        <button name="remove" value="<?php echo $idProduto; ?>" id="deletebutton" autocomplete="off"><i class='bx bx-trash'></i></button>
                       </td>
                       <td>
                         R$
                         <?php echo $subtotal; ?>,00
                       </td>
                     </tr><!-- tr Termina -->
-                    <?php
+                <?php
                   }
                 }
                 ?>
@@ -193,7 +198,7 @@ include("includes/main.php");
       Efetuar Check-Out <i class="fa fa-chevron-right"></i>
   </button>';
                 if ($count == 0) {
-                  echo '<script>alert("Seu carrinho está vazio!")</script>';
+                  // echo '<script>alert("Seu carrinho está vazio!")</script>';
                 } else {
                   // echo '<script>alert("Selecione uma quantidade válida para todos os produtos antes de prosseguir com o Checkout.")</script>';
                 }
@@ -269,7 +274,7 @@ include("includes/main.php");
 
         if (isset($_POST['remove'])) { //Verifica se o Botão foi apertado
           $removeId = $_POST['remove']; //Puxa o Valor do Botão
-      
+
           //Comando SQL 
           $deleteProduct = "delete from cart where p_id='$removeId'";
           $runDelete = mysqli_query($con, $deleteProduct);
@@ -369,13 +374,11 @@ $productLabel
           <table class="table"><!-- tabela Começa -->
             <tbody><!-- corpo Começa -->
               <tr>
-                <td> Subtotal do Pedido </td>
-                <th> R$
-                  <?php echo $total; ?>,00
-                </th>
+                <td>Subtotal do Pedido</td>
+                <th>R$<?php echo $total; ?>,00</th>
               </tr>
               <tr>
-                <td> Envio e manipulação </td>
+                <td>Envio e manipulação</td>
                 <th>R$0,00</th>
               </tr>
               <tr>
@@ -384,9 +387,7 @@ $productLabel
               </tr>
               <tr class="total">
                 <td>Total</td>
-                <th>R$
-                  <?php echo $total; ?>,00
-                </th>
+                <th>R$<?php echo $total; ?>,00</th>
               </tr>
             </tbody><!-- corpo Termina -->
           </table><!-- tabela Termina -->
@@ -401,8 +402,8 @@ $productLabel
 <script src="js/bootstrap.min.js"></script>
 
 <script>
-  $(document).ready(function (data) {
-    $(document).on('keyup', '.quantity', function () {
+  $(document).ready(function(data) {
+    $(document).on('keyup', '.quantity', function() {
       var id = $(this).data("product_id");
       var quantity = $(this).val();
       if (quantity != '') {
@@ -413,7 +414,7 @@ $productLabel
             id: id,
             quantity: quantity
           },
-          success: function (data) {
+          success: function(data) {
             $("body").load('cart.php');
           }
         });
@@ -421,6 +422,20 @@ $productLabel
     });
   });
 </script>
+
+<script>
+  // JavaScript para exibir ou ocultar o carrinho com base no conteúdo
+  $(document).ready(function() {
+    var count = <?php echo $count; ?>;
+
+    // Se o carrinho estiver vazio, oculta o carrinho e exibe a mensagem
+    if (count == 0) {
+      document.getElementById("content").style.display = "none";
+      document.getElementById("carrinhoVazio").style.display = "block";
+    }
+  });
+</script>
+
 </body>
 
 </html>
