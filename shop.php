@@ -15,7 +15,6 @@ $logout = "logout.php";
 $checkout = "checkout.php";
 $sobrenos = "about.php";
 
-
 // Inclui arquivos necessários, como configurações de banco de dados, cabeçalho, funções e conteúdo principal.
 include("includes/db.php");
 include("includes/header.php");
@@ -30,7 +29,7 @@ include("includes/main.php");
   <!-- HERO -->
   <div class="nero">
     <div class="nero__heading">
-      <span class="nero__bold">Pr©dutos |</span> ADAPLAY
+      <span class="nero__bold">Pr©dutos </span>
     </div>
     <p class="nero__text">
     </p>
@@ -97,12 +96,12 @@ include("includes/footer.php");
         if ($(this).css('display') == 'none') {
 
           // Se estiver oculto, muda o texto do elemento com a classe '.hide-show' para 'Show'
-          $(".hide-show").html('Show');
+          $(".hide-show").html('<img src="images/aberto.png" class="icon-image">');
 
         } else {
 
           // Se estiver visível, muda o texto do elemento com a classe '.hide-show' para 'Hide'
-          $(".hide-show").html('Hide');
+          $(".hide-show").html('<img src="images/fechado.png" class="icon-image">');
 
         }
 

@@ -1,5 +1,7 @@
 <div class="box2"><!--Inicio da Box -->
     <link href="styles/Login2.css" rel="stylesheet">
+    <link rel="icon" href="../images/logo.png">
+
     <div class="box-header"><!-- Inicio da box-header  -->
 
     </div><!-- fim da box-header  -->
@@ -76,6 +78,9 @@
         $run_customer = mysqli_query($con, $select_customer);
         // Executa a consulta SQL usando a conexão com o banco de dados ($con)
 
+        //$senha = $run_customer->fetch_assoc();
+        //password_verify($c_pass,$senha['c_pass'];
+
         $get_ip = getRealUserIp();
         // Obtém o endereço IP real do usuário
 
@@ -91,6 +96,7 @@
         $check_cart = mysqli_num_rows($run_cart);
         // Verifica quantas linhas foram retornadas pela consulta do carrinho
 
+        
         if ($check_customer == 0) {
             // Se nenhum cliente corresponder ao email e senha fornecidos
 
@@ -99,29 +105,24 @@
             exit();
             // Encerra o script
         }
-
+        
         if ($check_customer == 1 and $check_cart == 0) {
             // Se um cliente corresponder e não houver itens no carrinho
 
             $_SESSION['customer_email'] = $customer_email;
             // Define a variável de sessão 'customer_email' com o valor do email do cliente
 
-            echo "<script>alert('Conta Acessada.')</script>";
-            // Exibe um alerta informando que o cliente está logado
-
-            echo "<script>window.open('customer/my_account.php?my_orders','_self')</script>";
-            // Redireciona o cliente para a página 'my_account.php' com a consulta de 'my_orders' como parâmetro
+           
+            echo "<script>window.open('customer/load.php?my_orders','_self')</script>";
+        // Redireciona o cliente para a página 'LOAD.php' 
         } else {
             // Se um cliente corresponder e houver itens no carrinho
 
             $_SESSION['customer_email'] = $customer_email;
             // Define a variável de sessão 'customer_email' com o valor do email do cliente
 
-            echo "<script>alert('You are Logged In')</script>";
-            // Exibe um alerta informando que o cliente está logado
-
-            echo "<script>window.open('checkout.php','_self')</script>";
-            // Redireciona o cliente para a página 'checkout.php'
+            echo "<script>window.open('customer/load.php?my_orders','_self')</script>";
+            // Redireciona o cliente para a página 'Load.php'
         }
     }
 

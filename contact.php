@@ -219,6 +219,7 @@ $p = new Cliente("127.0.0.1", "3308", "ecom_store", "root", "");
 
         <section class="images">
             <div class="circle"></div>
+            <img src="images/brinquedos.png" alt="Bear Image" class="bear-image">
         </section>
     </div>
 

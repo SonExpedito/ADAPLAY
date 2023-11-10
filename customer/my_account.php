@@ -21,7 +21,7 @@ if (!isset($_SESSION['customer_email'])) {
   // Inclui os arquivos de configuração, cabeçalho, funções relacionadas à conta e a estrutura principal da página
   include("../includes/db.php");
   include("../includes/header.php");
-  include("functions/functions_MinhaConta.php");
+  include("../functions/functions.php");
   include("../includes/main.php");
 
 
