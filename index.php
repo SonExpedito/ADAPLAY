@@ -329,7 +329,6 @@ include("includes/main.php");
         <?php echo date("Y"); ?> ADAPLAY&trade;
       </div>
 
-     
 
     </div>
   </div>

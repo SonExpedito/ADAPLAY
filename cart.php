@@ -186,18 +186,24 @@ include("includes/main.php");
                 }
               }
 
-              // Se nenhum produto tiver quantidade igual a zero, exibe o botão de checkout.
-              if (!$quantidadeZero) {
-                echo '<a href="checkout.php" class="btn btn-success">
-                Efetuar Check-Out <i class="fa fa-chevron-right"></i>
-              </a>';
-              } else {
-                // Se houver algum produto com quantidade igual a zero, desabilite o botão de checkout e exiba a mensagem de erro.
+              // Verifica se o carrinho está vazio (count igual a zero) ou se algum produto tem quantidade igual a zero.
+              if ($count == 0 || $quantidadeZero) {
+                // Se o carrinho estiver vazio ou algum produto tiver quantidade igual a zero, desabilite o botão de checkout e exiba a mensagem de erro.
                 echo '<button class="btn btn-success" disabled>
-                Efetuar Check-Out <i class="fa fa-chevron-right"></i>
-              </button>
-              <script>alert("Selecione uma quantidade válida para todos os produtos antes de prosseguir com o Checkout.")</script>';
+      Efetuar Check-Out <i class="fa fa-chevron-right"></i>
+  </button>';
+                if ($count == 0) {
+                  echo '<script>alert("Seu carrinho está vazio!")</script>';
+                } else {
+                  // echo '<script>alert("Selecione uma quantidade válida para todos os produtos antes de prosseguir com o Checkout.")</script>';
+                }
+              } else {
+                // Caso contrário, exibe o botão de checkout normalmente.
+                echo '<a href="select_payment.php" class="btn btn-success">
+      Efetuar Check-Out <i class="fa fa-chevron-right"></i>
+  </a>';
               }
+
               ?>
             </div><!-- pull-right Termina -->
           </div><!-- rodapé da caixa Termina -->
@@ -270,8 +276,6 @@ include("includes/main.php");
           if ($runDelete) {
             echo "<script>window.open('cart.php','_self')</script>";
           }
-
-
         }
       }
       // Chama a função para atualizar o carrinho de compras
@@ -395,6 +399,7 @@ $productLabel
 <!-- Scripts JavaScript -->
 <script src="js/jquery.min.js"> </script>
 <script src="js/bootstrap.min.js"></script>
+
 <script>
   $(document).ready(function (data) {
     $(document).on('keyup', '.quantity', function () {
