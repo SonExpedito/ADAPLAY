@@ -45,6 +45,7 @@ include("includes/main.php");
       <div class="timeline-dot"></div>
       <div class="timeline-date">Fim-2022</div>
       <div class="timeline-content">
+      <img src="images/timeline2.png">
         <h3>AFFORDABLE TOYS</h3>
         <p>Esse foi o protótipo inicial do projeto, no qual já apresentava os recursos de forma visual (devido a
           utilizar apenas frontend)
@@ -68,6 +69,7 @@ include("includes/main.php");
       <div class="timeline-dot"></div>
       <div class="timeline-date">2023-2°Semestre</div>
       <div class="timeline-content">
+      <img src="images/timeline4.jpg">
         <h3>Final do Projeto</h3>
         <p>Após dois anos desde a concepção da ideia de uma loja de brinquedos adaptada, o projeto chegou ao fim neste
           ano.
