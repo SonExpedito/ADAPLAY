@@ -32,7 +32,7 @@ include("includes/main.php");
   <div class="wrapperzin swiper-wrapper">
 
     <div class="slidezin swiper-slide">
-      <img src="images/1r.png" alt="" class="image" />
+      <img src="images/Carrossel/1r.png" alt="" class="image" />
       <div class="image-data">
         <h2>ADAPLAY</h2>
         <span class="text">Fazendo o mundo um lugar mais inclusivo para todos</span>
@@ -42,7 +42,7 @@ include("includes/main.php");
     </div>
 
     <div class="slidezin swiper-slide">
-      <img src="images/2.jpg" alt="" class="image" />
+      <img src="images/Carrossel/2.jpg" alt="" class="image" />
       <div class="image-data">
         <h2>Bandai Namco</h2>
         <span class="text">Direto da terra do Sol nascente pro Ociente, aproveite agora os lançamentos </span>
@@ -52,7 +52,7 @@ include("includes/main.php");
     </div>
 
     <div class="slidezin swiper-slide">
-      <img src="images/3.jpg" alt="" class="image" />
+      <img src="images/Carrossel/3.jpg" alt="" class="image" />
       <div class="image-data">
         <h2>Brinquedos Adaptados </h2>
         <span class="text">Não existe nada como a imaginação de uma criança, e por isso não deve ser impedida</span>
