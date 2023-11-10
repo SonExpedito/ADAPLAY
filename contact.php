@@ -32,13 +32,11 @@ $p = new Cliente("127.0.0.1", "3308", "ecom_store", "root", "");
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles/style_Contact.css">
-    <title>Formulário de Contato</title>
+    
+    
+    <title></title>
 </head>
 
 <body>
