@@ -8,7 +8,9 @@ include("functions/functions.php");
 ?>
 
 <head>
-<link rel="icon" href="images/logo.png">
+  <link rel="icon" href="images/logo.png">
+  <meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 

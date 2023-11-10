@@ -46,12 +46,13 @@ $run_cart = mysqli_query($con, $get_cart);
 }
 ?>
 
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Site/ecommerce-website-php/styles/load.css">
-    <title>Loading</title>
+    <link rel="icon" href="images/logo.png">
+    <title>ADAPLAY</title>
 </head>
 <body>
     <style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
