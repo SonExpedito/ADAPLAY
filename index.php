@@ -81,6 +81,7 @@ include("includes/main.php");
     <img src="images/logos/8.png" />
     <img src="images/logos/9.png" />
     <img src="images/logos/10.png" />
+    <img src="images/logos/11.png" />
   </div>
 </div>
 
