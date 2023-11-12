@@ -47,7 +47,7 @@ include("includes/main.php");
         <h2>Bandai Namco</h2>
         <span class="text">Direto da terra do Sol nascente pro Ociente, aproveite agora os lançamentos </span>
         <br>
-        <a href="shop.php" class="button">Confira</a>
+        <a href="shop.php?page=1&man[]=7&" class="button">Confira</a>
       </div>
     </div>
 
@@ -57,7 +57,7 @@ include("includes/main.php");
         <h2>Brinquedos Adaptados </h2>
         <span class="text">Não existe nada como a imaginação de uma criança, e por isso não deve ser impedida</span>
         <br>
-        <a href="shop.php" class="button">Confira</a>
+        <a href="shop.php?page=1&p_cat[]=4&" class="button">Confira</a>
       </div>
 
     </div>
@@ -114,12 +114,12 @@ include("includes/main.php");
 
           <h1>Adaptados</h1>
           <p>Brinque sem Limites</p>
-          <a href="shop.php"><i class='bx bx-chevron-right'></i></a>
+          <a href="shop.php?page=1&p_cat[]=4&"><i class='bx bx-chevron-right'></i></a>
 
         </div>
 
 
-        <div class="card-img">
+        <div class="card-img" id="categorie">
           <img src="images/cards/card1.png">
 
         </div>
@@ -136,7 +136,7 @@ include("includes/main.php");
 
         </div>
 
-        <div class="card-img">
+        <div class="card-img" id="categorie2">
           <img src="images/cards/card2.png">
 
         </div>
@@ -149,12 +149,12 @@ include("includes/main.php");
 
           <h1>Esportes</h1>
           <p>Brinque como profissional</p>
-          <a href="shop.php"><i class='bx bx-chevron-right'></i></a>
+          <a href="bola-com-guizo"><i class='bx bx-chevron-right'></i></a>
 
         </div>
 
 
-        <div class="card-img">
+        <div class="card-img" id="categorie3">
           <img src="images/cards/card3.png">
 
         </div>
@@ -172,7 +172,7 @@ include("includes/main.php");
         </div>
 
 
-        <div class="card-img">
+        <div class="card-img" id="categorie4">
           <img src="images/cards/card4.png">
 
         </div>
@@ -232,70 +232,55 @@ include("includes/main.php");
   <hr>
 </div>
 
-<!-- FOOTER -->
 <footer class="page-footer">
 
   <div class="footer-nav">
     <div class="container clearfix">
 
-      <div class="footer-nav__col footer-nav__col--info">
-        <div class="footer-nav__heading">Informação</div>
-        <ul class="footer-nav__list">
-          <li class="footer-nav__item">
-            <a href="#" class="footer-nav__link">Marca</a>
-          </li>
-          <li class="footer-nav__item">
-            <a href="#" class="footer-nav__link">Serviço Customizado</a>
-          </li>
-          <li class="footer-nav__item">
-            <a href="#" class="footer-nav__link">Privacy &amp; Cookies</a>
-          </li>
-          <li class="footer-nav__item">
-            <a href="#" class="footer-nav__link">Posição Geográfica</a>
-          </li>
-        </ul>
-      </div>
 
-      <div class="footer-nav__col footer-nav__col--whybuy">
-        <div class="footer-nav__heading">Por que Comprar Conosco?</div>
-        <ul class="footer-nav__list">
-          <li class="footer-nav__item">
-            <a href="#" class="footer-nav__link">Envio &amp; Retorno</a>
-          </li>
-          <li class="footer-nav__item">
-            <a href="#" class="footer-nav__link">Segurança do Envio</a>
-          </li>
-          <li class="footer-nav__item">
-            <a href="#" class="footer-nav__link">FeedBack</a>
-          </li>
-          <li class="footer-nav__item">
-            <a href="#" class="footer-nav__link">Premiado</a>
-          </li>
-          <li class="footer-nav__item">
-            <a href="#" class="footer-nav__link">Negociação Ética</a>
-          </li>
-        </ul>
-      </div>
+
+
 
       <div class="footer-nav__col footer-nav__col--account">
         <div class="footer-nav__heading">Sua Conta
         </div>
         <ul class="footer-nav__list">
           <li class="footer-nav__item">
-            <a href="#" class="footer-nav__link">Login</a>
+            <a href="<?php echo $checkout ?>" class="footer-nav__link">Login</a>
           </li>
           <li class="footer-nav__item">
-            <a href="#" class="footer-nav__link">Registrar</a>
+            <a href="<?php echo $register ?>" class="footer-nav__link">Registrar</a>
           </li>
           <li class="footer-nav__item">
-            <a href="#" class="footer-nav__link">Ver Carrinho</a>
+            <a href="<?php echo $cart ?>" class="footer-nav__link">Ver Carrinho</a>
           </li>
           <li class="footer-nav__item">
-            <a href="#" class="footer-nav__link">Rastrear um pedido</a>
+            <a href="<?php echo $favorites ?>" class="footer-nav__link">Favoritos</a>
           </li>
           <li class="footer-nav__item">
-            <a href="#" class="footer-nav__link">Atualizar Informações</a>
+            <a href="<?php echo $conta ?>" class="footer-nav__link">Atualizar Informações</a>
           </li>
+        </ul>
+      </div>
+
+      <div class="footer-nav__col footer-nav__col--whybuy">
+        <div class="footer-nav__heading">Redes Sociais</div>
+        <ul class="footer-nav__list">
+          <li class="footer-nav__item">
+            <a href="https://web.facebook.com/" class="footer-nav__link">Facebook <i
+                class='bx bxl-facebook-circle'></i></a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="https://twitter.com/" class="footer-nav__link">Twitter/X <i class='bx bxl-twitter'></i></a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="https://www.instagram.com/" class="footer-nav__link">Instagram <i
+                class='bx bxl-instagram-alt'></i></a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="https://www.tiktok.com/" class="footer-nav__link">Tik Tok <i class='bx bxl-tiktok'></i></a>
+          </li>
+
         </ul>
       </div>
 
@@ -303,11 +288,11 @@ include("includes/main.php");
       <div class="footer-nav__col footer-nav__col--contacts">
         <div class="footer-nav__heading">Detalhes de Contato</div>
         <address class="address">
-          Head Office: Avenida ADAPLAY.<br>
+          Escritório: Avenida ADAPLAY.<br>
           180-182 Rua Teste, São Paulo.
         </address>
         <div class="phone">
-          Telephone:
+          Telefone:
           <a class="phone__number" href="tel:0123456789">0123-456-789</a>
         </div>
         <div class="email">
@@ -315,6 +300,8 @@ include("includes/main.php");
           <a href="mailto:support@yourwebsite.com" class="email__addr">support@yourwebsite.com</a>
         </div>
       </div>
+
+
 
     </div>
   </div>

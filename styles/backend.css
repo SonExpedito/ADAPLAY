@@ -553,7 +553,7 @@ img {
 }
 
 .page-header__bottomline .main-nav .categories__link:hover {
-  color: #00c8c8;
+  color: #11111f;
 }
 
 .page-header__bottomline .main-nav .categories__link i {
@@ -626,7 +626,7 @@ img {
 }
 
 .page-header .dropdown__link:hover {
-  color: #00c8c8;
+  color: #11111f;
 }
 
 .page-header .dropdown__banner {
@@ -756,7 +756,7 @@ img {
 }
 
 .page-footer .footer-nav__link:hover {
-  color: #00c8c8;
+  color: #11111f;
 }
 
 .page-footer .banners {
@@ -988,7 +988,7 @@ img {
 }
 
 .hero .btn1:hover {
-  background-color: #337ab7;
+  background-color: #11111f;
   color: white;
 }
 
@@ -1030,7 +1030,7 @@ img {
 }
 
 .todo a:hover {
-  color: #009595;
+  color: #11111f;
 }
 
 .tac {
@@ -1105,7 +1105,7 @@ nav {
 }
 
 .navmenuzin a:hover {
-  color: var(--color-principal);
+  color: #11111f;
 }
 
 .navmenuzin p {
@@ -1131,7 +1131,7 @@ nav {
 
 .nav-icon i:hover {
   transform: scale(1.1);
-  color: var(--color-principal);
+  color: #11111f;
 }
 
 #menu-icon {
@@ -1337,5 +1337,5 @@ nav {
 }
 
 #continuarComprandoBtn:hover {
-  background-color: #00c8c8;
+  background-color: #11111f;
 }

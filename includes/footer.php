@@ -9,46 +9,50 @@
 
 
 
-			<div class="footer-nav__col footer-nav__col--whybuy">
-				<div class="footer-nav__heading">Por que Comprar Conosco?</div>
-				<ul class="footer-nav__list">
-					<li class="footer-nav__item">
-						<a href="#" class="footer-nav__link">Envio &amp; Retorno</a>
-					</li>
-					<li class="footer-nav__item">
-						<a href="#" class="footer-nav__link">Segurança do Envio</a>
-					</li>
-					<li class="footer-nav__item">
-						<a href="#" class="footer-nav__link">FeedBack</a>
-					</li>
-					<li class="footer-nav__item">
-						<a href="#" class="footer-nav__link">Premiado</a>
-					</li>
-					<li class="footer-nav__item">
-						<a href="#" class="footer-nav__link">Negociação Ética</a>
-					</li>
-				</ul>
-			</div>
+
 
 			<div class="footer-nav__col footer-nav__col--account">
 				<div class="footer-nav__heading">Sua Conta
 				</div>
 				<ul class="footer-nav__list">
 					<li class="footer-nav__item">
-						<a href="#" class="footer-nav__link">Login</a>
+						<a href="<?php echo $checkout ?>" class="footer-nav__link">Login</a>
 					</li>
 					<li class="footer-nav__item">
-						<a href="#" class="footer-nav__link">Registrar</a>
+						<a href="<?php echo $register ?>" class="footer-nav__link">Registrar</a>
 					</li>
 					<li class="footer-nav__item">
-						<a href="#" class="footer-nav__link">Ver Carrinho</a>
+						<a href="<?php echo $cart ?>" class="footer-nav__link">Ver Carrinho</a>
 					</li>
 					<li class="footer-nav__item">
-						<a href="#" class="footer-nav__link">Rastrear um pedido</a>
+						<a href="<?php echo $favorites ?>" class="footer-nav__link">Favoritos</a>
 					</li>
 					<li class="footer-nav__item">
-						<a href="#" class="footer-nav__link">Atualizar Informações</a>
+						<a href="<?php echo $conta ?>" class="footer-nav__link">Atualizar Informações</a>
 					</li>
+				</ul>
+			</div>
+
+			<div class="footer-nav__col footer-nav__col--whybuy">
+				<div class="footer-nav__heading">Redes Sociais</div>
+				<ul class="footer-nav__list">
+					<li class="footer-nav__item">
+						<a href="https://web.facebook.com/" class="footer-nav__link">Facebook <i
+								class='bx bxl-facebook-circle'></i></a>
+					</li>
+					<li class="footer-nav__item">
+						<a href="https://twitter.com/" class="footer-nav__link">Twitter/X <i
+								class='bx bxl-twitter'></i></a>
+					</li>
+					<li class="footer-nav__item">
+						<a href="https://www.instagram.com/" class="footer-nav__link">Instagram <i
+								class='bx bxl-instagram-alt'></i></a>
+					</li>
+					<li class="footer-nav__item">
+						<a href="https://www.tiktok.com/" class="footer-nav__link">Tik Tok <i
+								class='bx bxl-tiktok'></i></a>
+					</li>
+
 				</ul>
 			</div>
 
@@ -69,7 +73,7 @@
 				</div>
 			</div>
 
-			
+
 
 		</div>
 	</div>
@@ -82,7 +86,8 @@
 		<div class="container clearfix">
 
 			<div class="copyright">
-				&copy; <?php echo date("Y"); ?> ADAPLAY&trade;
+				&copy;
+				<?php echo date("Y"); ?> ADAPLAY&trade;
 			</div>
 
 

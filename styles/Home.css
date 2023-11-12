@@ -395,9 +395,18 @@ a.button:hover {
 
 }
 
-.categorias .card-img:nth-child(3) {
-  transform: translateX(100%);
+#categorie2 {
+  transform: translateX(52%) translateY(-97%)
 }
+
+#categorie3 {
+  transform: translateX(53%) translateY(-97%)
+}
+
+#categorie4 {
+  transform: translateX(62%) translateY(-97%)
+}
+
 
 .categorias .card-img img {
   width: auto;
