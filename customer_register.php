@@ -12,6 +12,7 @@ $products = "shop.php";
 $contato = "contact.php";
 $logout = "logout.php";
 $checkout = "checkout.php";
+$sobrenos = "about.php";
 
 
 include("includes/db.php");
@@ -44,7 +45,6 @@ include("includes/main.php");
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
     rel="stylesheet">
   <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles/map.css">
 
 </head>
 
@@ -123,7 +123,7 @@ include("includes/main.php");
         <div id="map"></div>
         <div id="infowindow-content">
           <span id="place-name" class="title"></span><br />
-          <strong>Place ID:</strong> <span id="place-id"></span><br />
+
           <span id="place-address"></span>
         </div>
 
