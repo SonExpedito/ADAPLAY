@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `ecom_store`
 --
+create database `ecom_store`;
+use `ecom_store`;
 
 -- --------------------------------------------------------
 
@@ -97,8 +99,7 @@ CREATE TABLE `cart` (
 -- Despejando dados para a tabela `cart`
 --
 
-INSERT INTO `cart` (`p_id`, `ip_add`, `qty`, `p_price`, `size`) VALUES
-(48, '::1', 1, '24', 'Pequeno');
+
 
 -- --------------------------------------------------------
 
