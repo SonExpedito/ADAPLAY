@@ -14,7 +14,7 @@ $logout = "logout.php";
 $checkout = "checkout.php";
 $sobrenos = "about.php";
 
-
+//Includes do sistema
 include("includes/db.php");
 include("functions/functions.php");
 include("includes/main.php");
